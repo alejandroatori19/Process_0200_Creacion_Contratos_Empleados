@@ -1,0 +1,45 @@
+{
+  "DisplayName": "Main",
+  "Tooltip": null,
+  "HelpLink": null,
+  "Color": null,
+  "OriginalIconFileName": null,
+  "Arguments": [
+    {
+      "Name": "in_ConfigFilePath",
+      "DisplayName": "in_ConfigFilePath",
+      "Category": null,
+      "Tooltip": "Code of the process corresponding to the Country and the Area",
+      "Placeholder": "C:\\Users\\plrecuero\\Desktop\\Framework Stemdo\\Config.xlsx",
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "in_StepCode",
+      "DisplayName": "in_StepCode",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": "0200",
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "in_NombreProyecto",
+      "DisplayName": "in_NombreProyecto",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": "Proyecto1",
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    }
+  ]
+}

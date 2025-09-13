@@ -1,0 +1,10 @@
+[
+  {
+    "Constant": false,
+    "Name": "ScreenShot",
+    "TypeFullyQualifiedName": "UiPath.Core.Image, UiPath.UiAutomation.Activities, Version=25.10.13.0, Culture=neutral, PublicKeyToken=null",
+    "UnresolvedTypeFullyQualifiedName": null,
+    "Expression": null,
+    "IsLiteral": false
+  }
+]

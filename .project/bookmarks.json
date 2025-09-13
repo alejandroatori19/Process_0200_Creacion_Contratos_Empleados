@@ -1,0 +1,15 @@
+{
+  "Value": {
+    "Framework/ProcessTransactionItem.xaml": [
+      {
+        "IsEnabled": true,
+        "Annotation": null,
+        "Id": "5b2633ce-f421-4705-bb5b-3a3d782e35e8",
+        "ActivityIdRef": "CommentOut_1",
+        "ActivityId": "1.23",
+        "ActivityName": "Comment Out",
+        "IsTransient": false
+      }
+    ]
+  }
+}

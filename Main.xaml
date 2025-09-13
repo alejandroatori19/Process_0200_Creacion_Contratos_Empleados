@@ -1,0 +1,1025 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" this:Main.in_NombreProyecto="Proyecto1" this:Main.in_StepCode="0200" this:Main.in_ConfigFilePath="C:\Users\plrecuero\Desktop\Framework Stemdo\Config.xlsx" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mg="clr-namespace:Microsoft.Graph;assembly=Microsoft.Graph" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_NombreProyecto" Type="InArgument(x:String)" />
+    <x:Property Name="in_StepCode" Type="InArgument(x:String)" />
+    <x:Property sap2010:Annotation.AnnotationText="Code of the process corresponding to the Country and the Area" Name="in_ConfigFilePath" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1610,8672</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Main_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="108">
+      <x:String>Microsoft.Graph</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+      <x:String>Newtonsoft.Json</x:String>
+      <x:String>Newtonsoft.Json.Linq</x:String>
+      <x:String>Newtonsoft.Json.Schema</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Collections.Specialized</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.Dynamic</x:String>
+      <x:String>System.Globalization</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>System.Windows.Forms</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Activities.System.Arrays</x:String>
+      <x:String>UiPath.Activities.System.Collections</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Excel</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Excel.Enums</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Files</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Files.Contracts</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Files.Enums</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Mail</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Enums</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Files.Models</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
+      <x:String>UiPath.Shared.Activities.Utils</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.Web.Activities</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Contracts</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Data.Common</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="168">
+      <AssemblyReference>CoE Logs Activities</AssemblyReference>
+      <AssemblyReference>CoE Logs Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>CoE MicrosoftOffice365 Activities</AssemblyReference>
+      <AssemblyReference>CoE Utilities Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>Microsoft.Graph</AssemblyReference>
+      <AssemblyReference>Microsoft.Graph.Core</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>netstandard</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Collections.Specialized</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Text.Encoding.CodePages</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Windows.Forms</AssemblyReference>
+      <AssemblyReference>System.Windows.Forms.Primitives</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Database.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.FTP.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>UiPath_CustomActivities_CoE</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>CoE MicrosoftOffice365 Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>NPOI.Core</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="ShouldExpandAll">False</x:Boolean>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
+  <Sequence sap2010:Annotation.AnnotationText="***IMPORTANTE***&#xA;Modifique los argumentos de entrada.&#xA;&#xA;Lea el archivo de configuración de la Carpeta indicada en el argumento in_ConfigFilePath.&#xA;Cierre todas las aplicaciones definidas en el archivo de configuración.&#xA;Verifique si el proceso se ejecuta dentro de los intervalos de tiempo permitidos.&#xA;Verifique si el proceso puede ejecutarse según el valor del recurso.&#xA;Ejecute el flujo de trabajo MainStep.xaml." DisplayName="Sequence - Main - Init Framework Step" sap:VirtualizedContainerService.HintSize="1859,11242" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="scg:Dictionary(x:String, x:String)" Default="[New Dictionary(Of String, string)]" Name="dic_HojaConfig" />
+      <Variable x:TypeArguments="njl:JObject" Default="[new JObject]" Name="jo_config" />
+      <Variable x:TypeArguments="x:Boolean" Name="bool_allowExecutionTime" />
+      <Variable x:TypeArguments="s:DateTime" Name="datetime_maximumExecutionTime" />
+      <Variable x:TypeArguments="x:Boolean" Name="bool_allowProcessExecution" />
+      <Variable x:TypeArguments="x:Boolean" Name="bool_allowAllProcessesExecution" />
+      <Variable x:TypeArguments="scg:Dictionary(x:String, scg:Dictionary(x:String, x:String))" Name="Config" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence sap2010:Annotation.AnnotationText="Leerá el archivo de configuración ubicado en la carpeta que contiene el valor del argumento in_ConfigFilePath.&#xA;Cerrará todas las aplicaciones definidas en el archivo de configuración." DisplayName="Sequence - Inicialization" sap:VirtualizedContainerService.HintSize="1348,4153" sap2010:WorkflowViewState.IdRef="Sequence_61">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:LogMessage DisplayName="Log Message - Inicio Main" sap:VirtualizedContainerService.HintSize="574,175" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Iniciamos Main&quot;]">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:LogMessage>
+      <ui:LogMessage DisplayName="Log Message screen resolution" sap:VirtualizedContainerService.HintSize="574,175" sap2010:WorkflowViewState.IdRef="LogMessage_24" Level="Info" Message="[&quot;La resolución de pantalla principal es: &quot;+Screen.PrimaryScreen.Bounds.Width.ToString+&quot; x &quot;+ Screen.PrimaryScreen.Bounds.Height.ToString]" />
+      <Sequence DisplayName="Init All Settings - Read Config File" sap:VirtualizedContainerService.HintSize="574,1868" sap2010:WorkflowViewState.IdRef="Sequence_78">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="540,175" sap2010:WorkflowViewState.IdRef="LogMessage_25" Level="Info" Message="[&quot;Iniciamos Lectura del Archivo: &quot; + in_ConfigFilePath.ToString]" />
+        <Assign DisplayName="Assing out_Config (initialization)" sap:VirtualizedContainerService.HintSize="540,115" sap2010:WorkflowViewState.IdRef="Assign_36">
+          <Assign.To>
+            <OutArgument x:TypeArguments="scg:Dictionary(x:String, scg:Dictionary(x:String, x:String))">[Config]</OutArgument>
+          </Assign.To>
+          <Assign.Value>
+            <InArgument x:TypeArguments="scg:Dictionary(x:String, scg:Dictionary(x:String, x:String))">[New Dictionary(Of String, Dictionary(Of String, String))]</InArgument>
+          </Assign.Value>
+        </Assign>
+        <Sequence sap:VirtualizedContainerService.HintSize="540,1320" sap2010:WorkflowViewState.IdRef="Sequence_82">
+          <Sequence.Variables>
+            <Variable x:TypeArguments="scg:List(x:String)" Name="vList_HojasConfig" />
+          </Sequence.Variables>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:ExcelApplicationScope Password="{x:Null}" SensitivityLabel="{x:Null}" sap2010:Annotation.AnnotationText="Obtener el nombre de todas las hojas del archivo Excel." DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="506,281" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" SensitivityOperation="None" WorkbookPath="[in_ConfigFilePath]">
+            <ui:ExcelApplicationScope.Body>
+              <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,108" sap2010:WorkflowViewState.IdRef="Sequence_79">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:ExcelGetWorkbookSheets DisplayName="Get Workbook Sheets" sap:VirtualizedContainerService.HintSize="416,48" sap2010:WorkflowViewState.IdRef="ExcelGetWorkbookSheets_1" Sheets="[vList_HojasConfig]" />
+                </Sequence>
+              </ActivityAction>
+            </ui:ExcelApplicationScope.Body>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:ExcelApplicationScope>
+          <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For each configuration sheet" sap:VirtualizedContainerService.HintSize="506,947" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[vList_HojasConfig]">
+            <ui:ForEach.Body>
+              <ActivityAction x:TypeArguments="x:String">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:String" Name="Sheet" />
+                </ActivityAction.Argument>
+                <Sequence sap2010:Annotation.AnnotationText="Lea las configuraciones y constantes del archivo de configuración y agréguelas al diccionario de configuración." DisplayName="Get local settings and constants" sap:VirtualizedContainerService.HintSize="504,825" sap2010:WorkflowViewState.IdRef="Sequence_81">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="sd:DataTable" Name="dt_Config" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:ReadRange Range="{x:Null}" WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[dt_Config]" DisplayName="Read range (Settings and Constants sheets)" sap:VirtualizedContainerService.HintSize="470,120" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="[Sheet]" WorkbookPath="[in_ConfigFilePath]" />
+                  <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_Config]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="470,348" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+                    <ui:ForEachRow.Body>
+                      <ActivityAction x:TypeArguments="sd:DataRow">
+                        <ActivityAction.Argument>
+                          <DelegateInArgument x:TypeArguments="sd:DataRow" Name="Row" />
+                        </ActivityAction.Argument>
+                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="468,166" sap2010:WorkflowViewState.IdRef="Sequence_80">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <Assign sap:VirtualizedContainerService.HintSize="434,106" sap2010:WorkflowViewState.IdRef="Assign_37">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:String">[dic_HojaConfig(Row("Title").ToString)]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:String">[Row("Value").ToString]</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                        </Sequence>
+                      </ActivityAction>
+                    </ui:ForEachRow.Body>
+                  </ui:ForEachRow>
+                  <Assign sap:VirtualizedContainerService.HintSize="470,115" sap2010:WorkflowViewState.IdRef="Assign_38">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:String)">[Config(Sheet)]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="scg:Dictionary(x:String, x:String)">[dic_HojaConfig]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <Assign sap2010:Annotation.AnnotationText="Limpia el diccionario para no sobre escribir. No Borrar" sap:VirtualizedContainerService.HintSize="470,137" sap2010:WorkflowViewState.IdRef="Assign_39">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:String)">[dic_HojaConfig]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="scg:Dictionary(x:String, x:String)">[new Dictionary (of String, String)]</InArgument>
+                    </Assign.Value>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Assign>
+                </Sequence>
+              </ActivityAction>
+            </ui:ForEach.Body>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:ForEach>
+        </Sequence>
+        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="540,166" sap2010:WorkflowViewState.IdRef="LogMessage_26" Level="Info" Message="[&quot;Lectura CORRECTA del Archivo: &quot; + in_ConfigFilePath.ToString]" />
+      </Sequence>
+      <Sequence sap2010:Annotation.AnnotationText="Recurso booleano [a nivel de proceso] que indica si este proceso tiene permiso de ejecución. &#xA;Recurso booleano [a nivel de carpeta de orquestador] que indica si este proceso tiene permiso de ejecución." DisplayName="Sequence - Get Asset - Allow Execution" sap:VirtualizedContainerService.HintSize="574,1782" sap2010:WorkflowViewState.IdRef="Sequence_71">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="452,175" sap2010:WorkflowViewState.IdRef="LogMessage_27" Level="Info" Message="[&quot;Iniciamos Assets y Limpiamos Escritorio&quot;]" />
+        <ui:RetryScope LogRetriedExceptions="{x:Null}" RetriedExceptionsLogLevel="{x:Null}" sap2010:Annotation.AnnotationText="Recurso booleano [a nivel de proceso] que indica si este proceso tiene permiso de ejecución. " DisplayName="Retry Scope - Get Asset - Allow Process Execution" sap:VirtualizedContainerService.HintSize="452,466" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="3" RetryInterval="00:00:03">
+          <ui:RetryScope.ActivityBody>
+            <ActivityAction>
+              <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="[Config(&quot;Settings&quot;)(&quot;PermitirEjecucionProceso&quot;).ToString]" CacheStrategy="None" DisplayName="Get Asset - Allow Process Execution" FolderPath="[Config(&quot;Settings&quot;)(&quot;RutaCarpetaOrquestador&quot;).ToString]" sap:VirtualizedContainerService.HintSize="335,144" sap2010:WorkflowViewState.IdRef="GetRobotAsset_3">
+                <ui:GetRobotAsset.Value>
+                  <OutArgument x:TypeArguments="x:Boolean">[bool_allowProcessExecution]</OutArgument>
+                </ui:GetRobotAsset.Value>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:GetRobotAsset>
+            </ActivityAction>
+          </ui:RetryScope.ActivityBody>
+          <ui:RetryScope.Condition>
+            <ActivityFunc x:TypeArguments="x:Boolean" />
+          </ui:RetryScope.Condition>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </ui:RetryScope>
+        <ui:RetryScope LogRetriedExceptions="{x:Null}" RetriedExceptionsLogLevel="{x:Null}" sap2010:Annotation.AnnotationText="Recurso booleano [a nivel de carpeta de orquestador] que indica si este proceso tiene permiso de ejecución." DisplayName="Retry Scope - Get Asset - Allow All Processes Execution" sap:VirtualizedContainerService.HintSize="452,466" sap2010:WorkflowViewState.IdRef="RetryScope_2" NumberOfRetries="3" RetryInterval="00:00:03">
+          <ui:RetryScope.ActivityBody>
+            <ActivityAction>
+              <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="[Config(&quot;Settings&quot;)(&quot;PermitirEjecucionTodosProcesos&quot;).ToString]" CacheStrategy="None" DisplayName="Get Asset - Allow All Processes Execution" FolderPath="[Config(&quot;Settings&quot;)(&quot;RutaCarpetaOrquestador&quot;).ToString]" sap:VirtualizedContainerService.HintSize="334,144" sap2010:WorkflowViewState.IdRef="GetRobotAsset_4">
+                <ui:GetRobotAsset.Value>
+                  <OutArgument x:TypeArguments="x:Boolean">[bool_allowAllProcessesExecution]</OutArgument>
+                </ui:GetRobotAsset.Value>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:GetRobotAsset>
+            </ActivityAction>
+          </ui:RetryScope.ActivityBody>
+          <ui:RetryScope.Condition>
+            <ActivityFunc x:TypeArguments="x:Boolean" />
+          </ui:RetryScope.Condition>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </ui:RetryScope>
+        <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each Close Applications" sap:VirtualizedContainerService.HintSize="452,515" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[(Config(&quot;Settings&quot;)(&quot;AppCerrar&quot;).ToString).Split(&quot;,&quot;c)]">
+          <ui:ForEach.Body>
+            <ActivityAction x:TypeArguments="x:String">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="x:String" Name="currentText" />
+              </ActivityAction.Argument>
+              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="450,393" sap2010:WorkflowViewState.IdRef="Sequence_83">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="416,167" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="[currentText.ToString]" />
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="LogMessage_28" Level="Info" Message="[&quot;Cerramos Aplicacion: &quot; + currentText.ToString]" />
+              </Sequence>
+            </ActivityAction>
+          </ui:ForEach.Body>
+        </ui:ForEach>
+      </Sequence>
+    </Sequence>
+    <Sequence sap2010:Annotation.AnnotationText="Se asigna el tiempo máximo de ejecución.&#xA;Se verifica si el proceso está dentro del intervalo de tiempo de ejecución." DisplayName="Sequence - Executions Time" sap:VirtualizedContainerService.HintSize="1348,1990" sap2010:WorkflowViewState.IdRef="Sequence_62">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Assign sap2010:Annotation.AnnotationText="Tiempo máximo definido en el archivo Config en el que se ejecutará el proceso" DisplayName="Assign - Maximum Time Execution" sap:VirtualizedContainerService.HintSize="514,160" sap2010:WorkflowViewState.IdRef="Assign_30">
+        <Assign.To>
+          <OutArgument x:TypeArguments="s:DateTime">[datetime_maximumExecutionTime]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="s:DateTime">[DateTime.Now.AddMinutes(CInt(Config("0200")("maximumExecutionTime").ToString))]</InArgument>
+        </Assign.Value>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </Assign>
+      <ui:LogMessage DisplayName="Log Message - Maximum Time Execution" sap:VirtualizedContainerService.HintSize="514,175" sap2010:WorkflowViewState.IdRef="LogMessage_14" Level="Info" Message="[&quot;Proceso en ejecución hasta: &quot; + datetime_maximumExecutionTime.ToString(&quot;dd/MM/yyyy HH:mm:ss&quot;)]">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:LogMessage>
+      <If sap2010:Annotation.AnnotationText="Verificará si el tiempo de ejecución está dentro de los intervalos de tiempo definidos en el archivo de configuración." Condition="[String.IsNullOrEmpty(Config(&quot;0200&quot;)(&quot;allowedExecutionTimeSlots&quot;).ToString)]" DisplayName="If - Execution Allowed - Time Slot" sap:VirtualizedContainerService.HintSize="514,1352" sap2010:WorkflowViewState.IdRef="If_12">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <If.Then>
+          <Sequence DisplayName="Then - Execution Allowed - Time Slot" sap:VirtualizedContainerService.HintSize="512,166" sap2010:WorkflowViewState.IdRef="Sequence_67">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Assign DisplayName="Assign - Execution Allowed" sap:VirtualizedContainerService.HintSize="478,106" sap2010:WorkflowViewState.IdRef="Assign_31">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:Boolean">[bool_allowExecutionTime]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+              </Assign.Value>
+            </Assign>
+          </Sequence>
+        </If.Then>
+        <If.Else>
+          <Sequence DisplayName="Else - Execution Allowed - Time Slot" sap:VirtualizedContainerService.HintSize="512,1002" sap2010:WorkflowViewState.IdRef="Sequence_68">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="s:String[]" Name="array_executionTimeSlots" />
+              <Variable x:TypeArguments="s:DateTime" Name="datetime_currentTime" />
+              <Variable x:TypeArguments="s:DateTime" Name="datetime_timeSlotFrom" />
+              <Variable x:TypeArguments="s:DateTime" Name="datetime_timeSlotTo" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:LogMessage DisplayName="Log Message - Execution Time Slots" sap:VirtualizedContainerService.HintSize="478,175" sap2010:WorkflowViewState.IdRef="LogMessage_15" Level="Info" Message="[&quot;Franjas de tiempo de ejecución: &quot; + Config(&quot;0200&quot;)(&quot;allowedExecutionTimeSlots&quot;).ToString]">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:LogMessage>
+            <Assign DisplayName="Assign - Split Execution Time Slots" sap:VirtualizedContainerService.HintSize="478,115" sap2010:WorkflowViewState.IdRef="Assign_32">
+              <Assign.To>
+                <OutArgument x:TypeArguments="s:String[]">[array_executionTimeSlots]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="s:String[]">[Config("0200")("allowedExecutionTimeSlots").ToString.Split("-"c)]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign DisplayName="Assign - Current Time" sap:VirtualizedContainerService.HintSize="478,115" sap2010:WorkflowViewState.IdRef="Assign_33">
+              <Assign.To>
+                <OutArgument x:TypeArguments="s:DateTime">[datetime_currentTime]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="s:DateTime">[DateTime.Now]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <ui:MultipleAssign DisplayName="Multipple Assign - Start-End" sap:VirtualizedContainerService.HintSize="478,211" sap2010:WorkflowViewState.IdRef="MultipleAssign_8">
+              <ui:MultipleAssign.AssignOperations>
+                <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_19">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="s:DateTime">[datetime_timeSlotFrom]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="s:DateTime">[DateTime.ParseExact(datetime_currentTime.ToString("dd/MM/yyyy") + " " + array_executionTimeSlots(0) , "dd/MM/yyyy HH:mm", CultureInfo.CurrentCulture, DateTimeStyles.None)]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_20">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="s:DateTime">[datetime_timeSlotTo]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="s:DateTime">[DateTime.ParseExact(datetime_currentTime.ToString("dd/MM/yyyy") + " " + array_executionTimeSlots(1) , "dd/MM/yyyy HH:mm", CultureInfo.CurrentCulture.InvariantCulture, DateTimeStyles.None)]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_21">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="s:DateTime">[datetime_timeSlotTo]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="s:DateTime">[If(datetime_timeSlotTo &lt; datetime_timeSlotFrom, datetime_timeSlotTo.AddDays(1), datetime_timeSlotTo.AddMilliseconds(0))]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                </scg:List>
+              </ui:MultipleAssign.AssignOperations>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:MultipleAssign>
+            <ui:LogMessage DisplayName="Log Message - Current Time" sap:VirtualizedContainerService.HintSize="478,175" sap2010:WorkflowViewState.IdRef="LogMessage_16" Level="Info" Message="[&quot;Hora actual: &quot; + datetime_currentTime.ToString + &quot;. Franja horaria de inicio: &quot; + datetime_timeSlotFrom.ToString + &quot;. Franja horaria de finalización: &quot; + datetime_timeSlotTo.ToString]">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:LogMessage>
+            <Assign sap2010:Annotation.AnnotationText="Verificará si la hora actual está dentro de los intervalos de tiempo definidos." DisplayName="Assign - Execution Allowed" sap:VirtualizedContainerService.HintSize="478,151" sap2010:WorkflowViewState.IdRef="Assign_34">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:Boolean">[bool_allowExecutionTime]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:Boolean">[If(datetime_currentTime&gt;datetime_timeSlotFrom, If(datetime_currentTime&lt;= datetime_timeSlotTo, True, False), False)]</InArgument>
+              </Assign.Value>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </Assign>
+          </Sequence>
+        </If.Else>
+      </If>
+      <ui:LogMessage DisplayName="Log Message - Execution Allowed" sap:VirtualizedContainerService.HintSize="514,166" sap2010:WorkflowViewState.IdRef="LogMessage_17" Level="Info" Message="[&quot;Ejecución permitida: &quot; + bool_allowExecutionTime.ToString]">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:LogMessage>
+    </Sequence>
+    <If sap2010:Annotation.AnnotationText="Si el valor del Activo que permite la ejecución es Verdadero, y el tiempo de ejecución está dentro del time slot, pasará por la rama THEN, de lo contrario, por la rama ELSE." Condition="[CBool(bool_allowProcessExecution) = True AndAlso &#xA;CBool(bool_allowAllProcessesExecution) = True AndAlso &#xA;bool_allowExecutionTime = True]" DisplayName="If - Execution Allowed" sap:VirtualizedContainerService.HintSize="1348,4833" sap2010:WorkflowViewState.IdRef="If_8">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <If.Then>
+        <Sequence DisplayName="Then - Execution Allowed" sap:VirtualizedContainerService.HintSize="1346,3960" sap2010:WorkflowViewState.IdRef="Sequence_51">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Pick sap2010:Annotation.AnnotationText="Se comprobará si se ha alcanzado el tiempo máximo de ejecución.&#xA;Se ejecutará el flujo de trabajo Main_Step.xaml.&#xA;En caso de detectarse que se ha alcanzado el tiempo máximo, el flujo de trabajo finalizará." DisplayName="Pick - Execute Main_Step" sap:VirtualizedContainerService.HintSize="1312,3900" sap2010:WorkflowViewState.IdRef="Pick_1">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <PickBranch sap2010:Annotation.AnnotationText="Verificará si se ha alcanzado el tiempo máximo de ejecución.&#xA;En caso de alcanzar el tiempo máximo de ejecución, se cerrarán las aplicaciones definidas en el archivo de configuración." DisplayName="Pick Branch - TimeLoop" sap:VirtualizedContainerService.HintSize="604,3769" sap2010:WorkflowViewState.IdRef="PickBranch_4">
+              <PickBranch.Variables>
+                <Variable x:TypeArguments="s:DateTime" Name="datetime_currentTime" />
+              </PickBranch.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <PickBranch.Trigger>
+                <DoWhile sap2010:Annotation.AnnotationText="Comprobará si se ha alcanzado el tiempo máximo de ejecución." DisplayName="Do - Check Maximum Time" sap:VirtualizedContainerService.HintSize="514,690" sap2010:WorkflowViewState.IdRef="DoWhile_3">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <DoWhile.Condition>
+                    <VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="datetime_currentTime&lt;datetime_maximumExecutionTime" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_1" />
+                  </DoWhile.Condition>
+                  <Sequence sap2010:Annotation.AnnotationText="Asignar la hora actual" DisplayName="Sequence - Check Maximum Time" sap:VirtualizedContainerService.HintSize="468,495" sap2010:WorkflowViewState.IdRef="Sequence_63">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Assign DisplayName="Assign - Current Time" sap:VirtualizedContainerService.HintSize="434,115" sap2010:WorkflowViewState.IdRef="Assign_35">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="s:DateTime">[datetime_currentTime]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="s:DateTime">[DateTime.Now]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <ui:LogMessage DisplayName="Log Message - Current Time / Maximum Time" sap:VirtualizedContainerService.HintSize="434,175" sap2010:WorkflowViewState.IdRef="LogMessage_18" Level="Info" Message="[&quot;Hora actual: &quot; + Now.ToString(&quot;dd/MM/yyyy HH:mm:ss&quot;) +  &quot;. Tiempo máximo de ejecución: &quot; + datetime_maximumExecutionTime.ToString(&quot;dd/MM/yyyy HH:mm:ss&quot;)]">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:LogMessage>
+                    <Delay DisplayName="Delay - 25Sec" Duration="00:00:25" sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Delay_4">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </Delay>
+                  </Sequence>
+                </DoWhile>
+              </PickBranch.Trigger>
+              <Sequence sap2010:Annotation.AnnotationText="Terminación del proceso por haberse alcanzado el tiempo máximo de ejecución" DisplayName="Sequence - Close Applications" sap:VirtualizedContainerService.HintSize="514,795" sap2010:WorkflowViewState.IdRef="Sequence_64">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:LogMessage DisplayName="Log Message - Maximum Execution Time Reached" sap:VirtualizedContainerService.HintSize="452,175" sap2010:WorkflowViewState.IdRef="LogMessage_19" Level="Fatal" Message="[&quot;Proceso finalizado porque se alcanzó el tiempo máximo de ejecución&quot;]">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:LogMessage>
+                <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each Close Applications" sap:VirtualizedContainerService.HintSize="452,515" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[(Config(&quot;Settings&quot;)(&quot;AppCerrar&quot;).ToString).Split(&quot;,&quot;c)]">
+                  <ui:ForEach.Body>
+                    <ActivityAction x:TypeArguments="x:String">
+                      <ActivityAction.Argument>
+                        <DelegateInArgument x:TypeArguments="x:String" Name="currentText" />
+                      </ActivityAction.Argument>
+                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="450,393" sap2010:WorkflowViewState.IdRef="Sequence_84">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="416,167" sap2010:WorkflowViewState.IdRef="KillProcess_2" ProcessName="[currentText.ToString]" />
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="LogMessage_29" Level="Info" Message="[&quot;Cerramos Aplicacion: &quot; + currentText.ToString]" />
+                      </Sequence>
+                    </ActivityAction>
+                  </ui:ForEach.Body>
+                </ui:ForEach>
+              </Sequence>
+            </PickBranch>
+            <PickBranch sap2010:Annotation.AnnotationText="Esta rama ejecuta el flujo de trabajo Main_Step.xaml.&#xA;Si se detecta que se ha alcanzado el tiempo máximo, el flujo de trabajo finalizará.&#xA;Si el flujo de trabajo 'Main_Step' se ejecuta correctamente, se cerrarán las aplicaciones definidas en el archivo de configuración." DisplayName="Pick Branch - Main Step" sap:VirtualizedContainerService.HintSize="614,3769" sap2010:WorkflowViewState.IdRef="PickBranch_2">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <PickBranch.Trigger>
+                <TryCatch sap2010:Annotation.AnnotationText="Se asigna el tiempo de espera que tendrá el flujo de trabajo 'Main_Step'.&#xA;Ejecutar el flujo de trabajo MainStep.xaml." DisplayName="Try Catch - Main Step" sap:VirtualizedContainerService.HintSize="524,2741" sap2010:WorkflowViewState.IdRef="TryCatch_3">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <TryCatch.Try>
+                    <Sequence sap2010:Annotation.AnnotationText="Se asigna el tiempo de espera que tendrá el flujo de trabajo 'Main_Step'.&#xA;Ejecutar el flujo de trabajo MainStep.xaml." DisplayName="Sequence - Main Step" sap:VirtualizedContainerService.HintSize="522,655" sap2010:WorkflowViewState.IdRef="Sequence_42">
+                      <Sequence.Variables>
+                        <Variable x:TypeArguments="x:TimeSpan" Name="timespan_timeOutInvoke" />
+                      </Sequence.Variables>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:LogMessage DisplayName="Log Message - Executing Step" sap:VirtualizedContainerService.HintSize="488,175" sap2010:WorkflowViewState.IdRef="LogMessage_12" Level="Info" Message="[&quot;Ejecutando Step: &quot; + in_StepCode.ToString + &quot; Process.&quot;]">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:LogMessage>
+                      <Assign sap2010:Annotation.AnnotationText="Tiempo de espera que tendrá el flujo de trabajo Main_Step.xaml" DisplayName="Assign - TimeOut Main_Step WorkFlow" sap:VirtualizedContainerService.HintSize="488,146" sap2010:WorkflowViewState.IdRef="Assign_29">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:TimeSpan">[timespan_timeOutInvoke]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:TimeSpan">[System.TimeSpan.FromMinutes(CInt(Config("0200")("maximumExecutionTime").ToString))]</InArgument>
+                        </Assign.Value>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </Assign>
+                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="A través de los diferentes estados y transiciones se realizará el procesamiento de los TransactionItems contenidos en la cola de trabajo definida." DisplayName="Invoke WorkFlow - Main Step" sap:VirtualizedContainerService.HintSize="488,229" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" Level="Info" LogEntry="No" LogExit="No" Timeout="[timespan_timeOutInvoke]" UnSafe="False" WorkflowFileName="Framework\MainStep.xaml">
+                        <ui:InvokeWorkflowFile.Arguments>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_stepCode">0200</InArgument>
+                          <InArgument x:TypeArguments="scg:Dictionary(x:String, scg:Dictionary(x:String, x:String))" x:Key="in_config">[Config]</InArgument>
+                        </ui:InvokeWorkflowFile.Arguments>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:InvokeWorkflowFile>
+                    </Sequence>
+                  </TryCatch.Try>
+                  <TryCatch.Catches>
+                    <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="632,2054" sap2010:WorkflowViewState.IdRef="Catch`1_3">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ActivityAction x:TypeArguments="s:Exception">
+                        <ActivityAction.Argument>
+                          <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                        </ActivityAction.Argument>
+                        <Sequence DisplayName="Sequence - Exception" sap:VirtualizedContainerService.HintSize="522,1809" sap2010:WorkflowViewState.IdRef="Sequence_65">
+                          <Sequence.Variables>
+                            <Variable x:TypeArguments="mg:DriveItem" Name="driveItem_screenshot" />
+                          </Sequence.Variables>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:LogMessage DisplayName="Log Message - Notify SystemException" sap:VirtualizedContainerService.HintSize="488,175" sap2010:WorkflowViewState.IdRef="LogMessage_21" Level="Error" Message="[&quot;Se ha producido un error (Try Cath - Main - SystemException) en: &quot; + exception.Source + &quot;. Falló debido a: &quot; + exception.Message]">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:LogMessage>
+                          <Sequence DisplayName="Take Screenshot - Main - SystemException" sap:VirtualizedContainerService.HintSize="488,369" sap2010:WorkflowViewState.IdRef="Sequence_85">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:TakeScreenshot WaitBefore="{x:Null}" DisplayName="Take Screenshot" sap:VirtualizedContainerService.HintSize="416,119" sap2010:WorkflowViewState.IdRef="TakeScreenshot_1" Screenshot="[GlobalVariablesNamespace.GlobalVariables.ScreenShot]">
+                              <ui:TakeScreenshot.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="c88aa17c-2830-4d32-b1c0-b0757e415bb0">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                  <ui:Target.WaitForReady>
+                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                  </ui:Target.WaitForReady>
+                                </ui:Target>
+                              </ui:TakeScreenshot.Target>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:TakeScreenshot>
+                            <ui:SaveImage DisplayName="Save Image" FileName="[Config(&quot;Settings&quot;)(&quot;RutaScreenShot&quot;).ToString + &quot;ScreenShot_&quot; + Now.ToString(&quot;yyyyMMdd_HHmmss&quot;) + &quot;.png&quot;]" sap:VirtualizedContainerService.HintSize="416,158" sap2010:WorkflowViewState.IdRef="SaveImage_1" Image="[GlobalVariablesNamespace.GlobalVariables.ScreenShot]" />
+                          </Sequence>
+                          <If sap2010:Annotation.AnnotationText="Comprueba si las notificaciones están habilitadas" Condition="[If(String.IsNullOrEmpty(Config(&quot;Settings&quot;)(&quot;NotificarSystemException&quot;).ToString),False,CBool(Config(&quot;Settings&quot;)(&quot;NotificarSystemException&quot;).ToString))]" DisplayName="If - Notify SystemException" sap:VirtualizedContainerService.HintSize="488,1205" sap2010:WorkflowViewState.IdRef="If_13">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <If.Then>
+                              <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="486,954" sap2010:WorkflowViewState.IdRef="Sequence_72">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <TryCatch sap2010:Annotation.AnnotationText="Notificar SystemException por correo electrónico" DisplayName="Try Catch - Send Mail - SystemException Notification" sap:VirtualizedContainerService.HintSize="452,894" sap2010:WorkflowViewState.IdRef="TryCatch_4">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <TryCatch.Try>
+                                    <Sequence DisplayName="Sequence - Send Mail - SystemException Notification" sap:VirtualizedContainerService.HintSize="450,435" sap2010:WorkflowViewState.IdRef="Sequence_75">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <ui:RetryScope LogRetriedExceptions="{x:Null}" RetriedExceptionsLogLevel="{x:Null}" sap2010:Annotation.AnnotationText="Notificar SystemException por correo electrónico" DisplayName="Retry Scope - Send Mail - SystemException Notification" sap:VirtualizedContainerService.HintSize="416,375" sap2010:WorkflowViewState.IdRef="RetryScope_3" NumberOfRetries="3" RetryInterval="00:00:05">
+                                        <ui:RetryScope.ActivityBody>
+                                          <ActivityAction>
+                                            <ui:Comment sap:VirtualizedContainerService.HintSize="334,76" sap2010:WorkflowViewState.IdRef="Comment_1" Text="// Generar aqui el codigo para el envio de la captura de pantalla por mail" />
+                                          </ActivityAction>
+                                        </ui:RetryScope.ActivityBody>
+                                        <ui:RetryScope.Condition>
+                                          <ActivityFunc x:TypeArguments="x:Boolean" />
+                                        </ui:RetryScope.Condition>
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </ui:RetryScope>
+                                    </Sequence>
+                                  </TryCatch.Try>
+                                  <TryCatch.Catches>
+                                    <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="454,21" sap2010:WorkflowViewState.IdRef="Catch`1_4">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <ActivityAction x:TypeArguments="s:Exception">
+                                        <ActivityAction.Argument>
+                                          <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                                        </ActivityAction.Argument>
+                                        <ui:LogMessage DisplayName="Log Message - Notify SystemException" sap:VirtualizedContainerService.HintSize="450,143" sap2010:WorkflowViewState.IdRef="LogMessage_23" Level="[UiPath.Core.Activities.LogLevel.Error]" Message="[&quot;Se ha producido un error (Try Cath - Main - Notify SystemException) en: &quot; + Exception.Source + &quot;. Falló debido a: &quot; + Exception.Message]">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </ui:LogMessage>
+                                      </ActivityAction>
+                                    </Catch>
+                                  </TryCatch.Catches>
+                                  <TryCatch.Finally>
+                                    <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="450,90" sap2010:WorkflowViewState.IdRef="Sequence_76">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </Sequence>
+                                  </TryCatch.Finally>
+                                </TryCatch>
+                              </Sequence>
+                            </If.Then>
+                            <If.Else>
+                              <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="486,90" sap2010:WorkflowViewState.IdRef="Sequence_73">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </Sequence>
+                            </If.Else>
+                          </If>
+                        </Sequence>
+                      </ActivityAction>
+                    </Catch>
+                  </TryCatch.Catches>
+                  <TryCatch.Finally>
+                    <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="522,90" sap2010:WorkflowViewState.IdRef="Sequence_77">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </Sequence>
+                  </TryCatch.Finally>
+                </TryCatch>
+              </PickBranch.Trigger>
+              <Sequence DisplayName="Sequence - Close Applications" sap:VirtualizedContainerService.HintSize="524,750" sap2010:WorkflowViewState.IdRef="Sequence_66">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:LogMessage DisplayName="Log Message - Execution Successfully" sap:VirtualizedContainerService.HintSize="452,175" sap2010:WorkflowViewState.IdRef="LogMessage_22" Level="Info" Message="[&quot;Ejecución completada con éxito&quot;]">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:LogMessage>
+                <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each Close Applications" sap:VirtualizedContainerService.HintSize="452,515" sap2010:WorkflowViewState.IdRef="ForEach`1_4" Values="[(Config(&quot;Settings&quot;)(&quot;AppCerrar&quot;).ToString).Split(&quot;,&quot;c)]">
+                  <ui:ForEach.Body>
+                    <ActivityAction x:TypeArguments="x:String">
+                      <ActivityAction.Argument>
+                        <DelegateInArgument x:TypeArguments="x:String" Name="currentText" />
+                      </ActivityAction.Argument>
+                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="450,393" sap2010:WorkflowViewState.IdRef="Sequence_86">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="416,167" sap2010:WorkflowViewState.IdRef="KillProcess_3" ProcessName="[currentText.ToString]" />
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="LogMessage_30" Level="Info" Message="[&quot;Cerramos Aplicacion: &quot; + currentText.ToString]" />
+                      </Sequence>
+                    </ActivityAction>
+                  </ui:ForEach.Body>
+                </ui:ForEach>
+              </Sequence>
+            </PickBranch>
+          </Pick>
+        </Sequence>
+      </If.Then>
+      <If.Else>
+        <Sequence DisplayName="Else - Execution Allowed" sap:VirtualizedContainerService.HintSize="1346,703" sap2010:WorkflowViewState.IdRef="Sequence_52">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <If sap2010:Annotation.AnnotationText="Verificar si la hora actual está dentro de los intervalos de tiempo.&#xA;En caso de estar dentro de los intervalos de tiempo, el proceso no podrá ejecutarse debido al valor del activo." Condition="[bool_allowExecutionTime=False]" DisplayName="If - Outside Time Slots" sap:VirtualizedContainerService.HintSize="1312,643" sap2010:WorkflowViewState.IdRef="If_9">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <If.Then>
+              <Sequence DisplayName="Then - Outside Time Slots" sap:VirtualizedContainerService.HintSize="450,226" sap2010:WorkflowViewState.IdRef="Sequence_53">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:LogMessage DisplayName="Log Message - Outside Time Slots" sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Warn" Message="[&quot;La hora actual está fuera de los intervalos de tiempo definidos en el archivo de configuración&quot;]">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:LogMessage>
+              </Sequence>
+            </If.Then>
+            <If.Else>
+              <Sequence DisplayName="Else - Outside Time Slots" sap:VirtualizedContainerService.HintSize="450,226" sap2010:WorkflowViewState.IdRef="Sequence_54">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:LogMessage DisplayName="Log Message - Process Not Allowed" sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Warn" Message="[&quot;El proceso no tiene permiso para ejecutarse&quot;]">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:LogMessage>
+              </Sequence>
+            </If.Else>
+          </If>
+        </Sequence>
+      </If.Else>
+    </If>
+    <ui:LogMessage DisplayName="Log Message - End Solution" sap:VirtualizedContainerService.HintSize="1348,166" sap2010:WorkflowViewState.IdRef="LogMessage_20" Level="Info" Message="[&quot;Fin Step: &quot;  + in_StepCode.ToString  + &quot; Process&quot;]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:LogMessage>
+  </Sequence>
+</Activity>
