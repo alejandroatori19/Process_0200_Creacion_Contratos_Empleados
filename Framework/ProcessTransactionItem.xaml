@@ -157,7 +157,7 @@
       <AssemblyReference>NPOI.Core</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Sequence - Process TransactionItem" sap:VirtualizedContainerService.HintSize="1582,2144" sap2010:WorkflowViewState.IdRef="Sequence_216">
+  <Sequence DisplayName="Sequence - Process TransactionItem" sap:VirtualizedContainerService.HintSize="1073.2,1413.6" sap2010:WorkflowViewState.IdRef="Sequence_216">
     <Sequence.Variables>
       <Variable x:TypeArguments="njl:JObject" Name="jObject_parameters" />
       <Variable x:TypeArguments="x:String" Name="Autor" />
@@ -167,8 +167,8 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message - Init WorkFlow - Process TransactionItem" sap:VirtualizedContainerService.HintSize="558,175" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Iniciamos Workflow 'ProcessTransactionItem'&quot;]" />
-    <TryCatch DisplayName="Try Catch - Process TransactionItem" sap:VirtualizedContainerService.HintSize="558,1780" sap2010:WorkflowViewState.IdRef="TryCatch_4">
+    <ui:LogMessage DisplayName="Log Message - Init WorkFlow - Process TransactionItem" sap:VirtualizedContainerService.HintSize="558.4,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Iniciamos Workflow 'ProcessTransactionItem'&quot;]" />
+    <TryCatch DisplayName="Try Catch - Process TransactionItem" sap:VirtualizedContainerService.HintSize="558.4,1049.6" sap2010:WorkflowViewState.IdRef="TryCatch_4">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -176,7 +176,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <TryCatch.Try>
-        <Sequence DisplayName="Sequence - Process TransactionItem" sap:VirtualizedContainerService.HintSize="556,820" sap2010:WorkflowViewState.IdRef="Sequence_213">
+        <Sequence DisplayName="Sequence - Process TransactionItem" sap:VirtualizedContainerService.HintSize="556,89.6" sap2010:WorkflowViewState.IdRef="Sequence_213">
           <Sequence.Variables>
             <Variable x:TypeArguments="sd:Image" Name="Image" />
             <Variable x:TypeArguments="x:Boolean" Name="existe" />
@@ -187,47 +187,6 @@
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:Comment sap:VirtualizedContainerService.HintSize="522,89" sap2010:WorkflowViewState.IdRef="Comment_1" Text="// Agregar aqui el codigo del Process" />
-          <Assign sap:VirtualizedContainerService.HintSize="522,115" sap2010:WorkflowViewState.IdRef="Assign_1">
-            <Assign.To>
-              <OutArgument x:TypeArguments="x:String">[Autor]</OutArgument>
-            </Assign.To>
-            <Assign.Value>
-              <InArgument x:TypeArguments="x:String">[io_queueParameters("PRODUCT CODE").ToString]</InArgument>
-            </Assign.Value>
-          </Assign>
-          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="522,556" sap2010:WorkflowViewState.IdRef="CommentOut_1">
-            <ui:CommentOut.Body>
-              <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="486,454" sap2010:WorkflowViewState.IdRef="Sequence_245">
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-                <If Condition="[Autor = &quot;S&quot; Or Autor = &quot;N&quot; Or Autor = &quot;#N/A&quot;]" sap:VirtualizedContainerService.HintSize="452,394" sap2010:WorkflowViewState.IdRef="If_3">
-                  <If.Then>
-                    <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,90" sap2010:WorkflowViewState.IdRef="Sequence_239">
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                    </Sequence>
-                  </If.Then>
-                  <If.Else>
-                    <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,174" sap2010:WorkflowViewState.IdRef="Sequence_240">
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                      <Throw Exception="[New BusinessRuleException((&quot;Opcion de Autor NO VALIDA: &quot;) + io_queueParameters(&quot;Autor&quot;).ToString)]" sap:VirtualizedContainerService.HintSize="416,114" sap2010:WorkflowViewState.IdRef="Throw_2" />
-                    </Sequence>
-                  </If.Else>
-                </If>
-              </Sequence>
-            </ui:CommentOut.Body>
-          </ui:CommentOut>
         </Sequence>
       </TryCatch.Try>
       <TryCatch.Catches>
@@ -249,7 +208,7 @@
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Rethrow DisplayName="Rethrow - BusinessRuleException" sap:VirtualizedContainerService.HintSize="522,48" sap2010:WorkflowViewState.IdRef="Rethrow_2" />
+              <Rethrow DisplayName="Rethrow - BusinessRuleException" sap:VirtualizedContainerService.HintSize="522.4,48" sap2010:WorkflowViewState.IdRef="Rethrow_2" />
             </Sequence>
           </ActivityAction>
         </Catch>
