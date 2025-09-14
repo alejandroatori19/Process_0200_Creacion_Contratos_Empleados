@@ -1,0 +1,337 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Añadir_Datos_Empleados_PDF" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="io_queueParameters" Type="InOutArgument(scg:Dictionary(x:String, x:Object))" />
+    <x:Property Name="in_config" Type="InArgument(scg:Dictionary(x:String, scg:Dictionary(x:String, x:String)))" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap2010:WorkflowViewState.IdRef>Añadir_Datos_Empleados_PDF_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath.Platform</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Globalization</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>UiPath.CodedWorkflows</AssemblyReference>
+      <AssemblyReference>NPOI.Core</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Database.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Añadir_Datos_Empleados_PDF" sap:VirtualizedContainerService.HintSize="1073.2,3976.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="rutaFichero" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Assign sap:VirtualizedContainerService.HintSize="1019.2,113.6" sap2010:WorkflowViewState.IdRef="Assign_1">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[rutaFichero]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">["C:\\Users\\agonzalez\\Documents\\GitHub\\Creacion_Contratos_Empleados\\Contratos_Rellenados\\Contrato_" + io_queueParameters("Nombre").ToString.Trim.Replace(" ", "_") + ".pdf"]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:CopyFile ContinueOnError="{x:Null}" Destination="{x:Null}" Path="{x:Null}" DestinationResource="[LocalResource.FromPath(rutaFichero)]" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="1019.2,222.4" sap2010:WorkflowViewState.IdRef="CopyFile_1" Overwrite="True" PathResource="[LocalResource.FromPath(&quot;Data\\Plantilla Contrato Stemdo.pdf&quot;)]" />
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Application: Plantilla Contrato Stemdo.pdf (SECURED) - Adobe Acrobat Reader (64-bit)" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="1019.2,3617.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" IsDisplayNameAuto="True" OpenMode="Always" ScopeGuid="4ec0f86c-b8b7-43de-acfd-be60b68aacb3" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="985.6,3327.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NCheckState DisplayName="Check App State 'B10862423 ALFREDO MONTI…'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="952,3098.4" sap2010:WorkflowViewState.IdRef="NCheckState_1" IsLoose="True" Timeout="3" Version="V5">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,2848" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,176" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;El PDF se ha abierto correctamente | Persona: &quot; + io_queueParameters(&quot;Nombre&quot;).ToString]" />
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'NOMBRE'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="4ec0f86c-b8b7-43de-acfd-be60b68aacb3" Text="[io_queueParameters(&quot;Nombre&quot;).ToString.Trim]" Version="V5">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable CVScreenId="3a607ed3-489c-4e19-841b-13294dd5c0c4" CvElementArea="482, 678, 591, 32" CvType="InputBox" DesignTimeRectangle="482, 680, 593, 27" ElementType="InputBox" FullSelectorArgument="&lt;wnd aaname='Document Pane' cls='AVL_AVView' title='AVScrolledPageView' /&gt;&lt;wnd cls='AVL_AVView' title='AVPageView' /&gt;&lt;ctrl idx='20' name=' ' role='editable text' /&gt;" Guid="3cbd84c9-1649-4c13-9092-e3f3a3d06652" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAlUAAAAfCAYAAADOWjiRAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAC5SURBVHhe7dahEYAwAATB9N8jjj6CQxCVcHJvZs1X8GNKkiTpd+M7SJIkab/3VF03AAC7nCoAgIBTBQAQcKoAAAJOFQBAwKkCAAg4VQAAAacKACDgVAEABJwqAICAUwUAEHCqAAACThUAQMCpAgAIOFUAAAGnCgAg4FQBAAScKgCAgFMFABBwqgAAAk4VAEDAqQIACDhVAAABpwoAIOBUAQAEnCoAgIBTBQAQWE6VJEmSznOqJEmSgh5BkjO18h9dBwAAAABJRU5ErkJggg==" InformativeScreenshot="c639d8c256d0b3f218bbd4971e096afe.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='acrobat.exe' cls='AcrobatSDIWindow' title='Plantilla Contrato Stemdo.pdf (SECURED) - Adobe Acrobat Reader (*' /&gt;" SearchSteps="Selector, Image, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                            <uix:Target CVScreenId="3a607ed3-489c-4e19-841b-13294dd5c0c4" CvTextArea="480, 661, 61, 17" CvTextArgument="D./DNA." CvType="Text" DesignTimeRectangle="480, 661, 61, 17" ElementType="Text" Guid="ba8967a7-8883-43e0-a1a8-7863494fceac" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NTypeInto.Target>
+                  </uix:NTypeInto>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'NIF/NIE'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="4ec0f86c-b8b7-43de-acfd-be60b68aacb3" Text="[io_queueParameters(&quot;NIF/NIE&quot;).ToString.Trim]" Version="V5">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable DesignTimeRectangle="1089, 680, 179, 27" ElementType="InputBox" FullSelectorArgument="&lt;wnd aaname='Document Pane' cls='AVL_AVView' title='AVScrolledPageView' /&gt;&lt;wnd cls='AVL_AVView' title='AVPageView' /&gt;&lt;ctrl idx='21' name=' ' role='editable text' /&gt;" Guid="6a873116-027e-4b43-8716-e24d896f8536" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAALcAAAAfCAYAAAClIVwcAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAADZSURBVHhe7dIxCsNQEENBnzK+/0kSSGFIWknNZwa22eJVut5wqOv/Aaf4jvu+X84ddT/jbtLL6GWMu0gvs+oZd4FeZtUz7gK9zKpn3AV6mVXPuAv0MquecRfoZVY94y7Qy6x6xl2gl1n1jLtAL7PqGXeBXmbVM+4CvcyqZ9wFeplVz7gL9DKrnnEX6GVWPeMu0MusesZdoJdZ9Yy7QC+z6hl3gV5m1TPuAr3MqmfcBXqZVc+4C/Qyq55xF+hlVj3jLtDLrHrGXaCXWfWecTt30j3jhhMZN8f6AGqJmPYZa7nEAAAAAElFTkSuQmCC" InformativeScreenshot="62ad913f8044ebc89f792e1e14eb71da.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='acrobat.exe' cls='AcrobatSDIWindow' title='Plantilla Contrato Stemdo.pdf (SECURED) - Adobe Acrobat Reader (*' /&gt;" SearchSteps="Selector, Image" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                            <uix:Target CVScreenId="84f09330-57d1-4530-bb2b-d89590a98121" CvTextArea="1086, 662, 60, 15" CvTextArgument="NIF/NIE" CvType="Text" DesignTimeRectangle="1086, 662, 60, 15" ElementType="Text" Guid="e5336f1f-0f11-46d2-8813-aebd21ca8b84" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NTypeInto.Target>
+                  </uix:NTypeInto>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'FECHA NACIMIENTO'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="4ec0f86c-b8b7-43de-acfd-be60b68aacb3" Text="[DateTime.ParseExact(&#xD;&#xA;&#x9;io_queueParameters(&quot;Fecha Nacimiento&quot;).ToString().Trim,&#xD;&#xA;&#x9;&quot;MM/dd/yyyy&quot;, &#xD;&#xA;&#x9;System.Globalization.CultureInfo.InvariantCulture&#xD;&#xA;).ToString(&quot;dd/MM/yyyy&quot;)]" Version="V5">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable CVScreenId="84f09330-57d1-4530-bb2b-d89590a98121" CvElementArea="1278, 680, 138, 28" CvType="InputBox" DesignTimeRectangle="1282, 680, 133, 27" ElementType="InputBox" FullSelectorArgument="&lt;wnd aaname='Document Pane' cls='AVL_AVView' title='AVScrolledPageView' /&gt;&lt;wnd cls='AVL_AVView' title='AVPageView' /&gt;&lt;ctrl idx='22' name=' ' role='editable text' /&gt;" Guid="5fb21381-5fa7-4fb2-9701-7ed4c013939f" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIkAAAAfCAYAAADTG+6XAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAABuSURBVHhe7dKxDcAgAANB9t8xHXuQLhKg6Bc4S9e4/rHMYuM8zM59kTwTdiIhiYQkEpJISCIhiYQkEpJISCIhiYQkEpJISCIhiYQkEpJISCIhiYQkEpJISCIhiYQkEpJISCIhiYR0RWL2N5FY7gWuLsWc/yE95AAAAABJRU5ErkJggg==" InformativeScreenshot="e1ed6f45a10b292117326e82df9ad2ad.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='acrobat.exe' cls='AcrobatSDIWindow' title='Plantilla Contrato Stemdo.pdf (SECURED) - Adobe Acrobat Reader (*' /&gt;" SearchSteps="Selector, Image, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                            <uix:Target CVScreenId="84f09330-57d1-4530-bb2b-d89590a98121" CvTextArea="1280, 661, 454, 17" CvTextArgument="FECHA NACIMIENTO N° AFILIACION SEGURIDAD SOCIAL" CvType="Text" DesignTimeRectangle="1280, 661, 454, 17" ElementType="Text" Guid="951de016-cd66-49d3-845c-d13711a97653" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NTypeInto.Target>
+                  </uix:NTypeInto>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'NUMERO SS'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="4ec0f86c-b8b7-43de-acfd-be60b68aacb3" Text="[io_queueParameters(&quot;Nº Seguridad Social&quot;).ToString.Trim]" Version="V5">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable DesignTimeRectangle="1455, 680, 240, 27" ElementType="InputBox" FullSelectorArgument="&lt;wnd aaname='Document Pane' cls='AVL_AVView' title='AVScrolledPageView' /&gt;&lt;wnd cls='AVL_AVView' title='AVPageView' /&gt;&lt;ctrl idx='23' name=' ' role='editable text' /&gt;" Guid="78c74d9a-0a3d-4bf2-a786-76122173ecd7" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAPQAAAAfCAYAAADQrOC/AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAEDSURBVHhe7dOhcQJAGIRR+u8Dlz5SRVz6AJUIQO2y4pj3z3zmxDu1l5tz7mPu8vjgnDv3/gd9/fqWdGgvB/3ze3tLf588vqfxunhdJ3gGzYvjdS08g+bF8boWnkHz4nhdC8+geXG8roVn0Lw4XtfCM2heHK9r4Rk0L47XtfAMmhfH61p4Bs2L43UtPIPmxfG6Fp5B8+J4XQvPoHlxvK6FZ9C8OF7XwjNoXhyva+EZNC+O17XwDJoXx+taeAbNi+N1LTyD5sXxuhaeQfPieF0Lz6B5cbyuhWfQvDhe18IzaF4cr2vhGTQvjte18AyaF8frWngvBy3pzJ4G7Zw7/wzauQ+6O+XY81Us5FzvAAAAAElFTkSuQmCC" InformativeScreenshot="c47d796e45164d8b3f90b7e0d3c6b3c4.png" ScopeSelectorArgument="&lt;wnd app='acrobat.exe' cls='AcrobatSDIWindow' title='Plantilla Contrato Stemdo.pdf (SECURED) - Adobe Acrobat Reader (*' /&gt;" SearchSteps="Selector, Image" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                            <uix:Target CVScreenId="5d9c1269-1b10-4a49-ab28-e55608191898" CvTextArea="1280, 661, 454, 17" CvTextArgument="FECHA NACIMIENTO N° AFILIACION SEGURIDAD SOCIAL" CvType="Text" DesignTimeRectangle="1280, 660, 454, 18" ElementType="Text" Guid="76dd7110-aaa0-427e-bc19-a5fcca7f96cf" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NTypeInto.Target>
+                  </uix:NTypeInto>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'NIVEL FORMATIVO'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_5" ScopeIdentifier="4ec0f86c-b8b7-43de-acfd-be60b68aacb3" Text="[io_queueParameters(&quot;Nivel Formativo&quot;).ToString.Trim]" Version="V5">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable CVScreenId="df259994-538b-4a65-815c-b47c14779b9d" CvElementArea="478, 730, 696, 32" CvType="InputBox" DesignTimeRectangle="482, 733, 693, 27" ElementType="InputBox" FullSelectorArgument="&lt;wnd aaname='Document Pane' cls='AVL_AVView' title='AVScrolledPageView' /&gt;&lt;wnd cls='AVL_AVView' title='AVPageView' /&gt;&lt;ctrl idx='24' name=' ' role='editable text' /&gt;" Guid="5b223153-d856-4fff-8de6-cfee9ada321b" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAArkAAAAfCAYAAADjhNVuAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAADESURBVHhe7dYxDQAhAARB/Hukex/QUTwK2Mwm05yCG0uSJEmKNf6DJEmS9Hrn5M4PAADe5uQCAJDj5AIAkOPkAgCQ4+QCAJDj5AIAkOPkAgCQ4+QCAJDj5AIAkOPkAgCQ4+QCAJDj5AIAkOPkAgCQ4+QCAJDj5AIAkOPkAgCQ4+QCAJDj5AIAkOPkAgCQ4+QCAJDj5AIAkOPkAgCQ4+QCAJDj5AIAkOPkAgCQ4+QCAJDj5AIAkHOdXEmSJKmSkytJkqRcG1oP8owlMT6VAAAAAElFTkSuQmCC" InformativeScreenshot="cf4aed543106f18e292a4f8e595beae7.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='acrobat.exe' cls='AcrobatSDIWindow' title='Plantilla Contrato Stemdo.pdf (SECURED) - Adobe Acrobat Reader (*' /&gt;" SearchSteps="Selector, Image, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                            <uix:Target CVScreenId="df259994-538b-4a65-815c-b47c14779b9d" CvTextArea="481, 715, 149, 16" CvTextArgument="NIVEL FORMATIVO" CvType="Text" DesignTimeRectangle="481, 715, 149, 16" ElementType="Text" Guid="54ab2d57-d8ad-4fd3-83ed-06d59aaaae70" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NTypeInto.Target>
+                  </uix:NTypeInto>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'CODIGO NIVEL FORMATIVO'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_8" ScopeIdentifier="4ec0f86c-b8b7-43de-acfd-be60b68aacb3" Text="[io_queueParameters(&quot;Código Nivel Formativo&quot;).ToString.Trim]" Version="V5">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable DesignTimeRectangle="1188, 733, 40, 27" ElementType="InputBox" FullSelectorArgument="&lt;wnd aaname='Document Pane' cls='AVL_AVView' title='AVScrolledPageView' /&gt;&lt;wnd cls='AVL_AVView' title='AVPageView' /&gt;&lt;ctrl idx='25' name=' ' role='editable text' /&gt;" Guid="9b391c51-d760-4b48-8118-54406054cf7b" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACwAAAAfCAYAAACcai8CAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAABuSURBVFhH7Y6xDYAwEMQyJZmQjj2Ygi57hI7CoXTxke4kN1dYbnOzNR7V9wWf112a3o81+BlTw/YlmNi+BBPbl2Bi+xJMbF+Cie1LMLF9CSa2L8HE9iWY2L4EE9uXYGL7Ekxs329wZZbgXbZd8AvGSq/jlgVV4wAAAABJRU5ErkJggg==" InformativeScreenshot="935f2bab24296139ca600fb35832bb55.png" ScopeSelectorArgument="&lt;wnd app='acrobat.exe' cls='AcrobatSDIWindow' title='Plantilla Contrato Stemdo.pdf (SECURED) - Adobe Acrobat Reader (*' /&gt;" SearchSteps="Selector, Image" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                            <uix:Target CVScreenId="df259994-538b-4a65-815c-b47c14779b9d" CvTextArea="481, 715, 149, 16" CvTextArgument="NIVEL FORMATIVO" CvType="Text" DesignTimeRectangle="481, 715, 149, 16" ElementType="Text" Guid="27f49631-5894-4872-82a6-0a5ee33857fa" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NTypeInto.Target>
+                  </uix:NTypeInto>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'MUNICIPIO DEL DOMICILIO'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_7" ScopeIdentifier="4ec0f86c-b8b7-43de-acfd-be60b68aacb3" Text="[io_queueParameters(&quot;Municipio del Domicilio&quot;).ToString.Trim]" Version="V5">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable CVScreenId="df259994-538b-4a65-815c-b47c14779b9d" CvElementArea="480, 784, 638, 31" CvType="InputBox" DesignTimeRectangle="482, 787, 633, 26" ElementType="InputBox" FullSelectorArgument="&lt;wnd aaname='Document Pane' cls='AVL_AVView' title='AVScrolledPageView' /&gt;&lt;wnd cls='AVL_AVView' title='AVPageView' /&gt;&lt;ctrl idx='28' name=' ' role='editable text' /&gt;" Guid="ababf482-97e1-4c6c-82f8-0f8312566d75" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAn0AAAAeCAYAAABZjKgQAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAC4SURBVHhe7dYxEcAwEANB8+foLjySzkXM4G9vZhsh0HolSZI0vvUfJEmSNK9z+vYDAMA0Th8AQIDTBwAQ4PQBAAQ4fQAAAU4fAECA0wcAEOD0AQAEOH0AAAFOHwBAgNMHABDg9AEABDh9AAABTh8AQIDTBwAQ4PQBAAQ4fQAAAU4fAECA0wcAEOD0AQAEOH0AAAFOHwBAgNMHABDg9AEABDh9AAABTh8AQMB1+iRJkjQ3p0+SJCnQB3XrLE2+fYybAAAAAElFTkSuQmCC" InformativeScreenshot="e77c9e47e50444ec396371c72ac54cca.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='acrobat.exe' cls='AcrobatSDIWindow' title='Plantilla Contrato Stemdo.pdf (SECURED) - Adobe Acrobat Reader (*' /&gt;" SearchSteps="Selector, Image, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                            <uix:Target CVScreenId="df259994-538b-4a65-815c-b47c14779b9d" CvTextArea="480, 767, 214, 16" CvTextArgument="MUNICIPIO DEL DOMICILIO" CvType="Text" DesignTimeRectangle="480, 767, 214, 16" ElementType="Text" Guid="8a8d79da-a0d9-453f-931d-dfd37c6414e5" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NTypeInto.Target>
+                  </uix:NTypeInto>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'MUNICIPIO DEL DOMICILIO'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_6" ScopeIdentifier="4ec0f86c-b8b7-43de-acfd-be60b68aacb3" Text="[io_queueParameters(&quot;CP&quot;).ToString.Trim]" Version="V5">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable CVScreenId="654374d3-b2c2-48e7-9270-776eb79cb9b9" CvElementArea="1206, 785, 23, 29" CvType="InputBox" DesignTimeRectangle="1128, 787, 100, 26" ElementType="InputBox" FullSelectorArgument="&lt;wnd aaname='Document Pane' cls='AVL_AVView' title='AVScrolledPageView' /&gt;&lt;wnd cls='AVL_AVView' title='AVPageView' /&gt;&lt;ctrl idx='29' name=' ' role='editable text' /&gt;" Guid="ab55a636-4bbf-49f7-b288-c8e571454ae4" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGgAAAAeCAYAAADAZ1t9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAACXSURBVGhD7dGxDYNAFAVBqjQVktGHq3BGHyASS8aOfAQbzJdecjptMtPu0jddH9x/N8+P23feG2hZnza417bftp9A108j0xsboHgPULwHKN4DFO8BivcAxXuA4j1A8R6geA9QvAco3gMU7wGK9wDFe4DiPUDxHqB4D1C8ByjeAxTvAYr3AMV7gOI9QPHeF9D5YK19ALnmHTK+eynhHxkgAAAAAElFTkSuQmCC" InformativeScreenshot="7b84dde072d9ee204be34504a7eb0404.png" ScopeSelectorArgument="&lt;wnd app='acrobat.exe' cls='AcrobatSDIWindow' title='Plantilla Contrato Stemdo.pdf (SECURED) - Adobe Acrobat Reader (*' /&gt;" SearchSteps="Selector, Image, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                            <uix:Target CVScreenId="654374d3-b2c2-48e7-9270-776eb79cb9b9" CvTextArea="480, 767, 214, 16" CvTextArgument="MUNICIPIO DEL DOMICILIO" CvType="Text" DesignTimeRectangle="480, 767, 214, 16" ElementType="Text" Guid="12d0039c-2b80-404e-ad6f-d0c9f2cb41aa" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NTypeInto.Target>
+                  </uix:NTypeInto>
+                  <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SpecialKey="{x:Null}" Activate="True" DelayMS="500" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="416,168.8" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="s" KeyModifiers="Ctrl">
+                    <ui:SendHotkey.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="695361fb-c1dc-4d87-a651-bce8b5ba0a99">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:SendHotkey.Target>
+                  </ui:SendHotkey>
+                  <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DelayMS="500" DisplayName="Send Hotkey 'acrobat.exe'" sap:VirtualizedContainerService.HintSize="416,168.8" sap2010:WorkflowViewState.IdRef="SendHotkey_2" Key="enter" KeyModifiers="None" SpecialKey="True">
+                    <ui:SendHotkey.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="695361fb-c1dc-4d87-a651-bce8b5ba0a99">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:SendHotkey.Target>
+                  </ui:SendHotkey>
+                  <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Button'" sap:VirtualizedContainerService.HintSize="416,139.2" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
+                    <ui:Click.CursorPosition>
+                      <ui:CursorPosition Position="Center">
+                        <ui:CursorPosition.OffsetX>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetX>
+                        <ui:CursorPosition.OffsetY>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetY>
+                      </ui:CursorPosition>
+                    </ui:Click.CursorPosition>
+                    <ui:Click.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="0ecc07f2-4785-47f5-a720-ee4c6f10e757" InformativeScreenshot="8b3073c7d85c0571288dfa7aeda0f934" Selector="&lt;wnd app='acrobat.exe' cls='#32770' title='Guardar como' /&gt;&lt;wnd ctrlid='1' title='&amp;amp;Guardar' /&gt;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:Click.Target>
+                  </ui:Click>
+                  <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Button'" sap:VirtualizedContainerService.HintSize="416,132" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT">
+                    <ui:Click.CursorPosition>
+                      <ui:CursorPosition Position="Center">
+                        <ui:CursorPosition.OffsetX>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetX>
+                        <ui:CursorPosition.OffsetY>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetY>
+                      </ui:CursorPosition>
+                    </ui:Click.CursorPosition>
+                    <ui:Click.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="0ecc07f2-4785-47f5-a720-ee4c6f10e757" InformativeScreenshot="0da85d00ea19129de2b747d45f14218a" Selector="&lt;wnd app='acrobat.exe' cls='#32770' title='Confirmar Guardar como' /&gt;&lt;wnd aaname='Confirmar Guardar como' cls='DirectUIHWND' /&gt;&lt;wnd aaname='Sí' cls='Button' title='&amp;amp;Sí' /&gt;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:Click.Target>
+                  </ui:Click>
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="449.6,230.4" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,168.8" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;El PDF no se ha abierto correctamente | Persona: &quot; + io_queueParameters(&quot;Nombre&quot;).ToString]" />
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="302, 200, 1259, 703" FullSelectorArgument="&lt;wnd cls='AVL_AVView' title='AVPageView' /&gt;&lt;ctrl role='client' /&gt;" FuzzySelectorArgument="&lt;wnd cls='AVL_AVView' title='AVPageView' matching:title='fuzzy' fuzzylevel:title='0.0' /&gt;&lt;ctrl role='client' automationid='' matching:automationid='fuzzy' fuzzylevel:automationid='0.0' check:fulltext='B10862423&amp;#xD;&amp;#xA;ALFREDO MONTILLA ÁLVARO&amp;#xD;&amp;#xA;75561417T&amp;#xD;&amp;#xA;REPRESENTANTE&amp;#xD;&amp;#xA;STEMDO ECOSYSTEM  S.L.&amp;#xD;&amp;#xA;CALLE VILLA DE MADRID 17&amp;#xD;&amp;#xA;ESPAÑA&amp;#xD;&amp;#xA;724&amp;#xD;&amp;#xA;HUELVA&amp;#xD;&amp;#xA;21041&amp;#xD;&amp;#xA;21001&amp;#xD;&amp;#xA;0111&amp;#xD;&amp;#xA;06115999742&amp;#xD;&amp;#xA;PROGRAMACIÓN, CONSULTORÍA Y OTRAS ACTIVIDADES&amp;#xD;&amp;#xA;62&amp;#xD;&amp;#xA;ESPAÑA&amp;#xD;&amp;#xA;724&amp;#xD;&amp;#xA;MÉRIDA&amp;#xD;&amp;#xA;06800&amp;#xD;&amp;#xA; &amp;#xD;&amp;#xA; &amp;#xD;&amp;#xA; &amp;#xD;&amp;#xA; &amp;#xD;&amp;#xA; &amp;#xD;&amp;#xA; &amp;#xD;&amp;#xA;ESPAÑOLA&amp;#xD;&amp;#xA;724&amp;#xD;&amp;#xA; &amp;#xD;&amp;#xA; &amp;#xD;&amp;#xA;ESPAÑA&amp;#xD;&amp;#xA;724&amp;#xD;&amp;#xA; &amp;#xD;&amp;#xA; &amp;#xD;&amp;#xA; &amp;#xD;&amp;#xA;ANALISTAS Y DISEÑADORES DE SOFTWARE (I+D+I)&amp;#xD;&amp;#xA;NIVEL I, DENTRO DEL GRUPO E, DEL ÁREA DE ACTIVIDAD 2  - UIPATH DEVELOPER&amp;#xD;&amp;#xA;GRUPO 3&amp;#xD;&amp;#xA;CALLE SANTA CATALINA, 2, MÉRIDA (06800), BADAJOZ. &amp;#xD;&amp;#xA; &amp;#xD;&amp;#xA; &amp;#xD;&amp;#xA; &amp;#xD;&amp;#xA; &amp;#xD;&amp;#xA; &amp;#xD;&amp;#xA; &amp;#xD;&amp;#xA; : Elección1&amp;#xD;&amp;#xA; : Elección2&amp;#xD;&amp;#xA; : Elección1&amp;#xD;&amp;#xA; : Elección2&amp;#xD;&amp;#xA;40&amp;#xD;&amp;#xA;LUNES&amp;#xD;&amp;#xA;VIERNES&amp;#xD;&amp;#xA; &amp;#xD;&amp;#xA;: Elección1&amp;#xD;&amp;#xA;: Elección3&amp;#xD;&amp;#xA;: Elección2&amp;#xD;&amp;#xA;: Elección4&amp;#xD;&amp;#xA; &amp;#xD;&amp;#xA;: Elección1&amp;#xD;&amp;#xA;: Elección2&amp;#xD;&amp;#xA;15/09/2025&amp;#xD;&amp;#xA;3 MESES&amp;#xD;&amp;#xA;17.000&amp;#xD;&amp;#xA;ANUALES&amp;#xD;&amp;#xA;SALARIO BASE + PLUS DE CONVENIO + P.P. EXTRA&amp;#xD;&amp;#xA;SEGÚN CONVENIO&amp;#xD;&amp;#xA;EMPRESAS DE CONSULTORÍA, ESTUDIOS DE MERCADO Y DE LA OPINIÓN PÚBLICA&amp;#xD;&amp;#xA;: Elección1&amp;#xD;&amp;#xA;: Elección2&amp;#xD;&amp;#xA; : Elección1&amp;#xD;&amp;#xA; : Elección2&amp;#xD;&amp;#xA; &amp;#xD;&amp;#xA; &amp;#xD;&amp;#xA; &amp;#xD;&amp;#xA; &amp;#xD;&amp;#xA; &amp;#xD;&amp;#xA; &amp;#xD;&amp;#xA; &amp;#xD;&amp;#xA; &amp;#xD;&amp;#xA; &amp;#xD;&amp;#xA; &amp;#xD;&amp;#xA; &amp;#xD;&amp;#xA; &amp;#xD;&amp;#xA; &amp;#xD;&amp;#xA; &amp;#xD;&amp;#xA; &amp;#xD;&amp;#xA;MÉRIDA&amp;#xD;&amp;#xA;: Sí&amp;#xD;&amp;#xA;: Sí&amp;#xD;&amp;#xA;: Sí&amp;#xD;&amp;#xA;: Sí&amp;#xD;&amp;#xA;: Sí&amp;#xD;&amp;#xA;: Sí&amp;#xD;&amp;#xA;: Sí&amp;#xD;&amp;#xA;: Sí&amp;#xD;&amp;#xA;: Sí&amp;#xD;&amp;#xA;: Sí&amp;#xD;&amp;#xA;: Sí&amp;#xD;&amp;#xA;: Sí&amp;#xD;&amp;#xA;: Sí&amp;#xD;&amp;#xA;: Sí&amp;#xD;&amp;#xA;: Sí&amp;#xD;&amp;#xA;: Elección3&amp;#xD;&amp;#xA;: Elección1&amp;#xD;&amp;#xA;: Elección2&amp;#xD;&amp;#xA;: Sí&amp;#xD;&amp;#xA;: Elección1&amp;#xD;&amp;#xA;: Elección2&amp;#xD;&amp;#xA;: Elección3&amp;#xD;&amp;#xA; &amp;#xD;&amp;#xA;: Elección1&amp;#xD;&amp;#xA;: Elección5&amp;#xD;&amp;#xA;: Elección3&amp;#xD;&amp;#xA;: Elección7&amp;#xD;&amp;#xA;: Elección2&amp;#xD;&amp;#xA;: Elección4&amp;#xD;&amp;#xA;: Elección6&amp;#xD;&amp;#xA;: Elección8&amp;#xD;&amp;#xA;: Sí&amp;#xD;&amp;#xA;: Elección1&amp;#xD;&amp;#xA;: Elección2&amp;#xD;&amp;#xA;: Elección3&amp;#xD;&amp;#xA; &amp;#xD;&amp;#xA;: Sí&amp;#xD;&amp;#xA;: Elección1&amp;#xD;&amp;#xA;: Elección2&amp;#xD;&amp;#xA;: Elección3&amp;#xD;&amp;#xA; &amp;#xD;&amp;#xA; &amp;#xD;&amp;#xA; &amp;#xD;&amp;#xA; &amp;#xD;&amp;#xA; &amp;#xD;&amp;#xA;: Sí&amp;#xD;&amp;#xA;: Elección2&amp;#xD;&amp;#xA;: Elección1&amp;#xD;&amp;#xA;: Elección3&amp;#xD;&amp;#xA;: Elección1&amp;#xD;&amp;#xA;: Elección3&amp;#xD;&amp;#xA;: Elección2&amp;#xD;&amp;#xA;: Elección4&amp;#xD;&amp;#xA;: Sí&amp;#xD;&amp;#xA;: Elección1&amp;#xD;&amp;#xA;: Elección2&amp;#xD;&amp;#xA;: Elección3&amp;#xD;&amp;#xA;: Elección1&amp;#xD;&amp;#xA;: Elección3&amp;#xD;&amp;#xA;: Elección2&amp;#xD;&amp;#xA;: Elección4&amp;#xD;&amp;#xA;: Sí&amp;#xD;&amp;#xA;: Elección1&amp;#xD;&amp;#xA;: Elección2&amp;#xD;&amp;#xA;: Elección3&amp;#xD;&amp;#xA; &amp;#xD;&amp;#xA;: Elección1&amp;#xD;&amp;#xA;: Elección4&amp;#xD;&amp;#xA;: Elección2&amp;#xD;&amp;#xA;: Elección5&amp;#xD;&amp;#xA;: Elección6&amp;#xD;&amp;#xA;: Elección7&amp;#xD;&amp;#xA;: Elección8&amp;#xD;&amp;#xA;: Elección9&amp;#xD;&amp;#xA;: Elección3&amp;#xD;&amp;#xA;: Elección1&amp;#xD;&amp;#xA;: Elección2&amp;#xD;&amp;#xA;: Sí&amp;#xD;&amp;#xA;: Elección1&amp;#xD;&amp;#xA;: Elección2&amp;#xD;&amp;#xA;: Elección3&amp;#xD;&amp;#xA;: Elección1&amp;#xD;&amp;#xA;: Elección2&amp;#xD;&amp;#xA;: Elección3&amp;#xD;&amp;#xA;: Elección4&amp;#xD;&amp;#xA; &amp;#xD;&amp;#xA; &amp;#xD;&amp;#xA; &amp;#xD;&amp;#xA; &amp;#xD;&amp;#xA;: Sí&amp;#xD;&amp;#xA;: Elección1&amp;#xD;&amp;#xA;: Elección2&amp;#xD;&amp;#xA;: Elección3&amp;#xD;&amp;#xA; &amp;#xD;&amp;#xA;: Elección1&amp;#xD;&amp;#xA;: Elección2&amp;#xD;&amp;#xA;: Elección3&amp;#xD;&amp;#xA;: Elección4&amp;#xD;&amp;#xA;: Elección5&amp;#xD;&amp;#xA;: Elección6&amp;#xD;&amp;#xA;: Elección7&amp;#xD;&amp;#xA;: Elección8&amp;#xD;&amp;#xA;: Elección1&amp;#xD;&amp;#xA;: Elección2&amp;#xD;&amp;#xA;: Sí&amp;#xD;&amp;#xA;: Elección1&amp;#xD;&amp;#xA;: Elección2&amp;#xD;&amp;#xA;: Elección1&amp;#xD;&amp;#xA;: Elección3&amp;#xD;&amp;#xA;: Elección5&amp;#xD;&amp;#xA;: Elección2&amp;#xD;&amp;#xA;: Elección4&amp;#xD;&amp;#xA;: Elección6&amp;#xD;&amp;#xA; &amp;#xD;&amp;#xA;: Sí&amp;#xD;&amp;#xA;: Elección1&amp;#xD;&amp;#xA;: Elección2&amp;#xD;&amp;#xA;: Elección3&amp;#xD;&amp;#xA;: Elección1&amp;#xD;&amp;#xA;: Elección2&amp;#xD;&amp;#xA;: Sí&amp;#xD;&amp;#xA;: Elección1&amp;#xD;&amp;#xA;: Elección2&amp;#xD;&amp;#xA;: Elección3&amp;#xD;&amp;#xA;: Elección1&amp;#xD;&amp;#xA;: Elección2&amp;#xD;&amp;#xA; &amp;#xD;&amp;#xA; &amp;#xD;&amp;#xA;: Elección1&amp;#xD;&amp;#xA;: Elección2&amp;#xD;&amp;#xA;: Elección3&amp;#xD;&amp;#xA;: Elección1&amp;#xD;&amp;#xA;: Elección2&amp;#xD;&amp;#xA; &amp;#xD;&amp;#xA;: Elección1&amp;#xD;&amp;#xA;: Elección2&amp;#xD;&amp;#xA;: Sí&amp;#xD;&amp;#xA;: Elección1&amp;#xD;&amp;#xA;: Elección2&amp;#xD;&amp;#xA;: Elección3&amp;#xD;&amp;#xA;: Elección1&amp;#xD;&amp;#xA;: Elección4&amp;#xD;&amp;#xA;: Elección7&amp;#xD;&amp;#xA;: Elección10&amp;#xD;&amp;#xA;: Elección2&amp;#xD;&amp;#xA;: Elección5&amp;#xD;&amp;#xA;: Elección8&amp;#xD;&amp;#xA;: Elección11&amp;#xD;&amp;#xA;: Elección3&amp;#xD;&amp;#xA;: Elección6&amp;#xD;&amp;#xA;: Elección9&amp;#xD;&amp;#xA;: Elección12&amp;#xD;&amp;#xA; &amp;#xD;&amp;#xA; &amp;#xD;&amp;#xA;: Elección1&amp;#xD;&amp;#xA;: Elección2&amp;#xD;&amp;#xA; &amp;#xD;&amp;#xA; &amp;#xD;&amp;#xA; &amp;#xD;&amp;#xA; &amp;#xD;&amp;#xA; &amp;#xD;&amp;#xA;: Sí&amp;#xD;&amp;#xA;: Elección1&amp;#xD;&amp;#xA;: Elección2&amp;#xD;&amp;#xA;: Elección3&amp;#xD;&amp;#xA;CLÁUSULAS ADICIONALES EN DOCUMENTO PRIVADO (ANEXOS 1 Y 2)&amp;#xD;&amp;#xA;MÉRIDA&amp;#xD;&amp;#xA;15&amp;#xD;&amp;#xA;SEPTIEMBRE&amp;#xD;&amp;#xA;2025' /&gt;" Guid="d19aa750-d31b-48a6-a3e8-5d0b41ce0ed6" InformativeScreenshot="a55305e9377fb5edea6381a5838bfe3d.png" ScopeSelectorArgument="&lt;wnd app='acrobat.exe' cls='AcrobatSDIWindow' title='Contrato*.pdf (SECURED) - Adobe Acrobat Reader*' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive" />
+              </uix:NCheckState.Target>
+            </uix:NCheckState>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="952,168.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Archivo abierto correctamente (PDF) | &quot; + rutaFichero]" />
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-9, -9, 1938, 1038" Arguments="[rutaFichero]" FilePath="C:\Program Files\Adobe\Acrobat DC\Acrobat\acrobat.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAUASURBVFhH5dh9TFVlHAfwg5ZY5sUIfKkop5XTtGXqUouo9I6w4K4FNducDk3ECzgBkVbMtUk4YQxkvExuS7EIDZbNbEQ5hbDVeBE1mHDXire4IIy355znebz3fm3nsPzjnHvRq+doW398/zh7nvM8nz33nOd3zyNcv35dAKCJ2+02LOq5JovgEehy+bmOlq7jJuEcNwnXuEmADhniJiHHVVoU4nY6tXN6iUegs/jQam4SHHx+IOjb4ZB2xkJK2Hb7idvspmuWMRbsL3KTYHMW5M5Vz+ktHoHcJPzI5zwIaU8CiL0dZGwMhJDbz/Cwm9TXcunj1Gts/iOcm4Tjzk8+vCWkNyBjKxeBXGjSTnYncTggpe8CD5zq5EHTTjn3pd8U6Q0Itm61dgKdIiV9ABbg5+QmodKZnz3b7XJpDPcUKEfakwg2+wH5BfzMZStaCC/IewYkPd2g2zeBBU+Xn8mTzvzsOWqHfsDhYYgnvgRN3Aqx5rS23VPGx0FaL0OKeRM8wE/ehnLVDv2A9nbQmAjQN0JB33pN2+4t4+MQjx8Df3quDCRqh25A8adqsI0WiF9XgIfMgnTujKaP13R3gb28XNnM1Q7dgOTns2DvRIAmbAV/bCakyq+0fSaJPJexwJ5uMMt6sMUhkKuP6OP+aTxQ3jb27QUPmga2ajHI0JCmfbLcHeCeRPDA+8A2hGnabhbjgfYrYOa1YAFTwJ4MhPTDaZ/qt7HAsTGIZTbwBcGgoctBN1rAzKtB6s6CXGkDuXwR5PdLIF2dXtHGAjv/ghS3CXzWFNCk7ZAy0sDnzQA1rwXd/C7otvdBYzdC2r4JYlUFyNUBzRjGAeXV+7YS7Kk5ygTyW8wiXlHANPJ1sIWzQeO3QKw4Bhb6AljYCo9vuDHASy2QtrwHFhIAHjwNUopVKV3KT9nvAPnzD9CsfWBLQsAWBIMF+YOFh0KU+xgKHLwKKT8bdNGjoC8+q9RRGrNh4nlT9/03Z8+A/PoLSN/f2jZdgSMjEEsKJmpuTiboS8+DPbcA4ncntX19iG5Asb8fNNkKajGDhq0AXfIExKM2Ba7u60t0AyqQ70+B7oqDlGwFkfe70VFtPx+jH1CODBq8CjI0CDLueV/zNfoCDcj/E1haWooDBw6grKwMHR0dqKqqUq4PHz6MxsZGdHZ2wmazISsrC3l5ebDb7ZoxDAWGh4cjNzcX6enpyMnJQWxsLJKTk1FUVIS4uDiUl5cjKipKwR05ckQBq8cwFGg2m1FbW4vq6mokJCQgOjoaxcXF6OvrQ1paGnbv3o3IyEh0dXVhdHQU4/JHkodxDAVmZmYiNTUV2dnZygqWlJRgYGAAGRkZsFqtCjAsLAwxMTHo6enRjGE4UEYVFhaivb0d8fHxKCgoQEtLC3bs2IH9+/crwPr6erS2tmruvyvAurq6G9dJSUnKSqWkpODgwYOoqamBxWJBb2+v5l51DAE2NDTA4XDcuG5ra8P58+fR1NSkoAYHB9Hc3IyRWyiDtwd8ddVExfAwoK6xd4CtWeYzcIg9Mw/iF5+D9PZ4/at+R5HH7HdA/OYEuPy5ahJG1I7JgFYe4HeNL50PujMWYmEexNIifVOcD2nvLtA1S8Efniqfcn2kdngFOksOTefB/p+yx00D8tIbmnkPOXjQ/TnOkkMBaodXoHxW52pumOG6eGGZq/G3lYampXmpq7lh5qTng//l/AOBiPgPb7Y6sQAAAABJRU5ErkJggg==" sap2010:WorkflowViewState.IdRef="TargetApp_1" InformativeScreenshot="bc3cae6449a4f8bce6e3f18a6a554e3e.png" Selector="&lt;wnd app='acrobat.exe' cls='AcrobatSDIWindow' title='Plantilla Contrato Stemdo.pdf (SECURED) - Adobe Acrobat Reader (*' /&gt;" Version="V2" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
