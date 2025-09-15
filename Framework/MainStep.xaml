@@ -187,7 +187,7 @@
       <x:Boolean x:Key="ShouldExpandAll">False</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <StateMachine InitialState="{x:Reference __ReferenceID3}" sap2010:Annotation.AnnotationText="Through the different states and transitions, the processing of the TransactionItems contained in the defined work queue will be carried out." DisplayName="State Machine - Main Step" sap:VirtualizedContainerService.HintSize="1079.2,353.6" sap2010:WorkflowViewState.IdRef="StateMachine_1">
+  <StateMachine InitialState="{x:Reference __ReferenceID3}" sap2010:Annotation.AnnotationText="Through the different states and transitions, the processing of the TransactionItems contained in the defined work queue will be carried out." DisplayName="State Machine - Main Step" sap:VirtualizedContainerService.HintSize="1014.4000000000001,624" sap2010:WorkflowViewState.IdRef="StateMachine_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1588,7 +1588,7 @@
           <Transition.To>
             <State x:Name="__ReferenceID2" sap2010:Annotation.AnnotationText="Procesar TransactionItem&#xA;- Success&#xA;- BusinessRuleException&#xA;- SystemException" DisplayName="State - Process TransactionItem" sap:VirtualizedContainerService.HintSize="296,137.6" sap2010:WorkflowViewState.IdRef="State_3">
               <State.Entry>
-                <TryCatch DisplayName="Try Cath - Process TransactionItem" sap:VirtualizedContainerService.HintSize="496,2909" sap2010:WorkflowViewState.IdRef="TryCatch_9">
+                <TryCatch DisplayName="Try Cath - Process TransactionItem" sap:VirtualizedContainerService.HintSize="496,2904.8" sap2010:WorkflowViewState.IdRef="TryCatch_9">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1596,14 +1596,14 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <TryCatch.Try>
-                    <Sequence DisplayName="Sequence - Process TransactionItem" sap:VirtualizedContainerService.HintSize="494,557" sap2010:WorkflowViewState.IdRef="Sequence_517">
+                    <Sequence DisplayName="Sequence - Process TransactionItem" sap:VirtualizedContainerService.HintSize="494.4,554.4" sap2010:WorkflowViewState.IdRef="Sequence_517">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:AddLogFields sap2010:Annotation.AnnotationText="TransactionItem Reference is added to Logs" DisplayName="Add Log Fields - Reference" sap:VirtualizedContainerService.HintSize="460,154" sap2010:WorkflowViewState.IdRef="AddLogFields_31">
+                      <ui:AddLogFields sap2010:Annotation.AnnotationText="TransactionItem Reference is added to Logs" DisplayName="Add Log Fields - Reference" sap:VirtualizedContainerService.HintSize="460.8,152.8" sap2010:WorkflowViewState.IdRef="AddLogFields_31">
                         <ui:AddLogFields.Fields>
                           <InArgument x:TypeArguments="x:String" x:Key="Reference">[queueItem_TransactionItem.Reference]</InArgument>
                         </ui:AddLogFields.Fields>
@@ -1615,7 +1615,7 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:AddLogFields>
-                      <ui:LogMessage DisplayName="Log Message - Init State - Process TransactionItem" sap:VirtualizedContainerService.HintSize="460,175" sap2010:WorkflowViewState.IdRef="LogMessage_75" Level="Info" Message="[&quot;Iniciamos Estado 'Process TransactionItem'&quot;]">
+                      <ui:LogMessage DisplayName="Log Message - Init State - Process TransactionItem" sap:VirtualizedContainerService.HintSize="460.8,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_75" Level="Info" Message="[&quot;Iniciamos Estado 'Process TransactionItem'&quot;]">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1623,7 +1623,7 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:LogMessage>
-                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ProcessTransactionItem.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="460,168" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_26" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Framework\ProcessTransactionItem.xaml">
+                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ProcessTransactionItem.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="460.8,167.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_26" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Framework\ProcessTransactionItem.xaml">
                         <ui:InvokeWorkflowFile.Arguments>
                           <InArgument x:TypeArguments="scg:Dictionary(x:String, scg:Dictionary(x:String, x:String))" x:Key="in_config">[in_config]</InArgument>
                           <InOutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="io_queueParameters">[dic_queueParameters]</InOutArgument>
@@ -1644,14 +1644,14 @@
                         <ActivityAction.Argument>
                           <DelegateInArgument x:TypeArguments="ui:BusinessRuleException" Name="Exception" />
                         </ActivityAction.Argument>
-                        <Sequence DisplayName="Sequence - End State - Process TransactionItem - Exception" sap:VirtualizedContainerService.HintSize="494,341" sap2010:WorkflowViewState.IdRef="Sequence_49">
+                        <Sequence DisplayName="Sequence - End State - Process TransactionItem - Exception" sap:VirtualizedContainerService.HintSize="494.4,340" sap2010:WorkflowViewState.IdRef="Sequence_49">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:LogMessage DisplayName="Log Message - Process TransactionItem - BusinessException" sap:VirtualizedContainerService.HintSize="460,175" sap2010:WorkflowViewState.IdRef="LogMessage_76" Level="Warn" Message="[&quot;Se ha producido un error (State - Process TransactionItem - BusinessRuleException) en: &quot; + exception.Source + &quot;. Error debido a: &quot; + exception.Message + &quot;. Tipo de error: &quot; + exception.GetType.ToString]">
+                          <ui:LogMessage DisplayName="Log Message - Process TransactionItem - BusinessException" sap:VirtualizedContainerService.HintSize="460.8,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_76" Level="Warn" Message="[&quot;Se ha producido un error (State - Process TransactionItem - BusinessRuleException) en: &quot; + exception.Source + &quot;. Error debido a: &quot; + exception.Message + &quot;. Tipo de error: &quot; + exception.GetType.ToString]">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>

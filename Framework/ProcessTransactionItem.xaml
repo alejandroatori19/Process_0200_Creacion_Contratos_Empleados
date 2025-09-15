@@ -157,7 +157,7 @@
       <AssemblyReference>NPOI.Core</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Sequence - Process TransactionItem" sap:VirtualizedContainerService.HintSize="1073.2,1550.4" sap2010:WorkflowViewState.IdRef="Sequence_216">
+  <Sequence DisplayName="Sequence - Process TransactionItem" sap:VirtualizedContainerService.HintSize="1073.2,1726.4" sap2010:WorkflowViewState.IdRef="Sequence_216">
     <Sequence.Variables>
       <Variable x:TypeArguments="njl:JObject" Name="jObject_parameters" />
       <Variable x:TypeArguments="x:String" Name="Autor" />
@@ -168,7 +168,7 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log Message - Init WorkFlow - Process TransactionItem" sap:VirtualizedContainerService.HintSize="557.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Iniciamos Workflow 'ProcessTransactionItem'&quot;]" />
-    <TryCatch DisplayName="Try Catch - Process TransactionItem" sap:VirtualizedContainerService.HintSize="557.6,1187.2" sap2010:WorkflowViewState.IdRef="TryCatch_4">
+    <TryCatch DisplayName="Try Catch - Process TransactionItem" sap:VirtualizedContainerService.HintSize="557.6,1363.2" sap2010:WorkflowViewState.IdRef="TryCatch_4">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -176,7 +176,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <TryCatch.Try>
-        <Sequence DisplayName="Sequence - Process TransactionItem" sap:VirtualizedContainerService.HintSize="556,227.2" sap2010:WorkflowViewState.IdRef="Sequence_213">
+        <Sequence DisplayName="Sequence - Process TransactionItem" sap:VirtualizedContainerService.HintSize="556,403.2" sap2010:WorkflowViewState.IdRef="Sequence_213">
           <Sequence.Variables>
             <Variable x:TypeArguments="sd:Image" Name="Image" />
             <Variable x:TypeArguments="x:Boolean" Name="existe" />
@@ -187,6 +187,11 @@
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Comprobaciones_datos - Invoke Workflow File (Modules\Comprobaciones_datos.xaml)" sap:VirtualizedContainerService.HintSize="522.4,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Modules\Comprobaciones_datos.xaml">
+            <ui:InvokeWorkflowFile.Arguments>
+              <InOutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="io_queueParameters">[io_queueParameters]</InOutArgument>
+            </ui:InvokeWorkflowFile.Arguments>
+          </ui:InvokeWorkflowFile>
           <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Añadir_Datos_Empleados_PDF - Invoke Workflow File (Modules\Añadir_Datos_Empleados_PDF.xaml)" sap:VirtualizedContainerService.HintSize="522.4,167.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Modules\Añadir_Datos_Empleados_PDF.xaml">
             <ui:InvokeWorkflowFile.Arguments>
               <InOutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="io_queueParameters">[io_queueParameters]</InOutArgument>
@@ -258,7 +263,7 @@
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Rethrow DisplayName="Rethrow - SelectorNotException" sap:VirtualizedContainerService.HintSize="522,48" sap2010:WorkflowViewState.IdRef="Rethrow_5" />
+              <Rethrow DisplayName="Rethrow - SelectorNotException" sap:VirtualizedContainerService.HintSize="522.4,48" sap2010:WorkflowViewState.IdRef="Rethrow_5" />
             </Sequence>
           </ActivityAction>
         </Catch>
@@ -280,7 +285,7 @@
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Rethrow DisplayName="Rethrow - SystemException" sap:VirtualizedContainerService.HintSize="522,48" sap2010:WorkflowViewState.IdRef="Rethrow_6" />
+              <Rethrow DisplayName="Rethrow - SystemException" sap:VirtualizedContainerService.HintSize="522.4,48" sap2010:WorkflowViewState.IdRef="Rethrow_6" />
             </Sequence>
           </ActivityAction>
         </Catch>
