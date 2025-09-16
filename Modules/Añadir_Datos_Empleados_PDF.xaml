@@ -114,7 +114,7 @@
       <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Añadir_Datos_Empleados_PDF" sap:VirtualizedContainerService.HintSize="1073.2,4230.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Añadir_Datos_Empleados_PDF" sap:VirtualizedContainerService.HintSize="1073.2,4229.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="rutaFichero" />
     </Sequence.Variables>
@@ -123,7 +123,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Assign sap:VirtualizedContainerService.HintSize="1019.2,113.6" sap2010:WorkflowViewState.IdRef="Assign_1">
+    <Assign sap:VirtualizedContainerService.HintSize="1019.2,112.8" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[rutaFichero]</OutArgument>
       </Assign.To>
@@ -175,7 +175,7 @@
                       </uix:TargetAnchorable>
                     </uix:NTypeInto.Target>
                   </uix:NTypeInto>
-                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'FECHA NACIMIENTO'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="4ec0f86c-b8b7-43de-acfd-be60b68aacb3" Text="[DateTime.ParseExact(&#xA;&#x9;io_queueParameters(&quot;Fecha Nacimiento&quot;).ToString().Trim,&#xA;&#x9;&quot;MM/dd/yyyy&quot;, &#xA;&#x9;System.Globalization.CultureInfo.InvariantCulture&#xA;).ToString(&quot;dd/MM/yyyy&quot;)]" Version="V5">
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'FECHA NACIMIENTO'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="4ec0f86c-b8b7-43de-acfd-be60b68aacb3" Text="[io_queueParameters(&quot;Fecha Nacimiento&quot;).ToString().Trim]" Version="V5">
                     <uix:NTypeInto.Target>
                       <uix:TargetAnchorable CVScreenId="84f09330-57d1-4530-bb2b-d89590a98121" CvElementArea="1278, 680, 138, 28" CvType="InputBox" DesignTimeRectangle="1282, 680, 133, 27" ElementType="InputBox" FullSelectorArgument="&lt;wnd aaname='Document Pane' cls='AVL_AVView' title='AVScrolledPageView' /&gt;&lt;wnd cls='AVL_AVView' title='AVPageView' /&gt;&lt;ctrl idx='22' name=' ' role='editable text' /&gt;" Guid="5fb21381-5fa7-4fb2-9701-7ed4c013939f" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIkAAAAfCAYAAADTG+6XAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAABuSURBVHhe7dKxDcAgAANB9t8xHXuQLhKg6Bc4S9e4/rHMYuM8zM59kTwTdiIhiYQkEpJISCIhiYQkEpJISCIhiYQkEpJISCIhiYQkEpJISCIhiYQkEpJISCIhiYQkEpJISCIhiYR0RWL2N5FY7gWuLsWc/yE95AAAAABJRU5ErkJggg==" InformativeScreenshot="e1ed6f45a10b292117326e82df9ad2ad.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='acrobat.exe' cls='AcrobatSDIWindow' title='Plantilla Contrato Stemdo.pdf (SECURED) - Adobe Acrobat Reader (*' /&gt;" SearchSteps="Selector, Image, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
                         <uix:TargetAnchorable.Anchors>
@@ -245,7 +245,7 @@
                     <uix:NTypeInto.Target>
                       <uix:TargetAnchorable DesignTimeRectangle="922, 760, 570, 17" ElementType="InputBox" FullSelectorArgument="&lt;wnd aaname='Document Pane' cls='AVL_AVView' title='AVScrolledPageView' /&gt;&lt;wnd cls='AVL_AVView' title='AVPageView' /&gt;&lt;ctrl idx='37' name=' ' role='editable text' /&gt;" Guid="c977f577-2655-4722-a7a9-bf3c3ddbb381" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAj4AAAAVCAYAAABGxuRwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAADqSURBVHhe7dahikJRFAVQP99mmeYHTLQZHbAJtkEwaPLlaZMEj8lhfGq6Qbh7bVhw4b2z854chyoAgJ7dMhl/AADozd/wuT3GPwAA9MLwAQBiGD4AQAzDBwCIYfgAADEMHwAghuEDAMQwfACAGIYPABDD8AEAYhg+AEAMwwcAiGH4AAAxDB8AIMbj8DkM9Tn7quX3uY7Db60Xy/pY/dTh7n2p3WZb0/m+tqf/79H9W7ta7xO6Wu/Du1rvE7pa7xO6Wu8TulrvE7pa7xO6Xg6fJ+sIAKAHhg8AEONh+IiIiIj0HsNHREREYnIFYnjAlQuo8b4AAAAASUVORK5CYII=" InformativeScreenshot="9b9ec65743b02a7e71077a2208a626c7.png" ScopeSelectorArgument="&lt;wnd app='acrobat.exe' cls='AcrobatSDIWindow' title='Plantilla Contrato Stemdo.pdf (SECURED) - Adobe Acrobat Reader (*' /&gt;" SearchSteps="Selector, Image" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
                         <uix:TargetAnchorable.Anchors>
-                          <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                             <uix:Target CVScreenId="57d786ba-2c09-4ebc-8b56-3f81b71a254d" CvTextArea="1062, 695, 88, 16" CvTextArgument="CLAUSULAS" CvType="Text" DesignTimeRectangle="1062, 695, 88, 16" ElementType="Text" Guid="21a8ae08-2d7f-4058-9b2b-c012104b2d32" SearchSteps="CV" TargetType="ComputerVisionBased" />
                           </scg:List>
                         </uix:TargetAnchorable.Anchors>
