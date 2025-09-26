@@ -1,5 +1,5 @@
 {
-  "name": "Proyecto1_0200_Process",
+  "name": "Process_0200__Creacion_Contratos_Empleados",
   "projectId": "bc494c1e-b942-4c1f-9d65-d613e31aabe9",
   "description": "Framework Step to process TransactionItems in the defined queue.",
   "main": "Main.xaml",
@@ -39,7 +39,6 @@
     "projectProfile": "Developement",
     "outputType": "Process",
     "libraryOptions": {
-      "includeOriginalXaml": false,
       "privateWorkflows": []
     },
     "processOptions": {

@@ -1,0 +1,6 @@
+{
+  "Name": "Process_0200__Creacion_Contratos_Empleados",
+  "ProjectType": "Process",
+  "Description": "Framework Step to process TransactionItems in the defined queue.",
+  "MainFile": "Main.xaml"
+}

@@ -90,25 +90,25 @@
       <AssemblyReference>System.Linq.Queryable</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Comprobaciones_datos" sap:VirtualizedContainerService.HintSize="1073.2,2883.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Comprobaciones_datos" sap:VirtualizedContainerService.HintSize="1310,2893" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <If Condition="[Not System.Text.RegularExpressions.Regex.IsMatch(&#xD;&#xA;    io_queueParameters(&quot;Nombre&quot;).ToString.Trim,&#xD;&#xA;    &quot;^[A-Za-zÁÉÍÓÚáéíóúÑñ]+(?:\s+[A-Za-zÁÉÍÓÚáéíóúÑñ]+)*$&quot;&#xD;&#xA;&#x9;)]" DisplayName="Comprobacion NOMBRE" sap:VirtualizedContainerService.HintSize="451.2,336.8" sap2010:WorkflowViewState.IdRef="If_1">
+    <If Condition="[Not System.Text.RegularExpressions.Regex.IsMatch(&#xA;    io_queueParameters(&quot;Nombre&quot;).ToString.Trim,&#xA;    &quot;^[A-Za-zÁÉÍÓÚáéíóúÑñ]+(?:\s+[A-Za-zÁÉÍÓÚáéíóúÑñ]+)*$&quot;&#xA;&#x9;)]" DisplayName="Comprobacion NOMBRE" sap:VirtualizedContainerService.HintSize="452,338" sap2010:WorkflowViewState.IdRef="If_1">
       <If.Then>
-        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="449.6,173.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,174" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Throw Exception="[New BusinessRuleException (&quot;El NIF/NIE tiene problemas, se recomienda revisar | &quot; + io_queueParameters(&quot;Nombre&quot;).ToString + &quot; - &quot; + io_queueParameters(&quot;Nombre&quot;).ToString)]" sap:VirtualizedContainerService.HintSize="416,113.6" sap2010:WorkflowViewState.IdRef="Throw_1" />
+          <Throw Exception="[New BusinessRuleException (&quot;El NIF/NIE tiene problemas, se recomienda revisar | &quot; + io_queueParameters(&quot;Nombre&quot;).ToString + &quot; - &quot; + io_queueParameters(&quot;Nombre&quot;).ToString)]" sap:VirtualizedContainerService.HintSize="416,114" sap2010:WorkflowViewState.IdRef="Throw_1" />
         </Sequence>
       </If.Then>
       <If.Else>
-        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="449.6,24.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
+        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,25" sap2010:WorkflowViewState.IdRef="Sequence_3">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -118,19 +118,19 @@
         </Sequence>
       </If.Else>
     </If>
-    <If Condition="[Not System.Text.RegularExpressions.Regex.IsMatch(&#xD;&#xA;    io_queueParameters(&quot;NIF/NIE&quot;).ToString.Trim.ToUpper,&#xD;&#xA;    &quot;^\d{8}[A-Z]$&quot;&#xD;&#xA;)]" DisplayName="Comprobacion NIF" sap:VirtualizedContainerService.HintSize="451.2,336.8" sap2010:WorkflowViewState.IdRef="If_2">
+    <If Condition="[Not System.Text.RegularExpressions.Regex.IsMatch(&#xA;    io_queueParameters(&quot;NIF/NIE&quot;).ToString.Trim.ToUpper,&#xA;    &quot;^\d{8}[A-Z]$&quot;&#xA;)]" DisplayName="Comprobacion NIF" sap:VirtualizedContainerService.HintSize="452,338" sap2010:WorkflowViewState.IdRef="If_2">
       <If.Then>
-        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="449.6,173.6" sap2010:WorkflowViewState.IdRef="Sequence_4">
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,174" sap2010:WorkflowViewState.IdRef="Sequence_4">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Throw Exception="[New BusinessRuleException (&quot;El NIF/NIE tiene problemas, se recomienda revisar | &quot; + io_queueParameters(&quot;Nombre&quot;).ToString + &quot; - &quot; + io_queueParameters(&quot;NIF/NIE&quot;).ToString)]" sap:VirtualizedContainerService.HintSize="416,113.6" sap2010:WorkflowViewState.IdRef="Throw_2" />
+          <Throw Exception="[New BusinessRuleException (&quot;El NIF/NIE tiene problemas, se recomienda revisar | &quot; + io_queueParameters(&quot;Nombre&quot;).ToString + &quot; - &quot; + io_queueParameters(&quot;NIF/NIE&quot;).ToString)]" sap:VirtualizedContainerService.HintSize="416,114" sap2010:WorkflowViewState.IdRef="Throw_2" />
         </Sequence>
       </If.Then>
       <If.Else>
-        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="449.6,24.8" sap2010:WorkflowViewState.IdRef="Sequence_5">
+        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,25" sap2010:WorkflowViewState.IdRef="Sequence_5">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -140,9 +140,9 @@
         </Sequence>
       </If.Else>
     </If>
-    <If Condition="[Not DateTime.TryParseExact(&#xD;&#xA;    io_queueParameters(&quot;Fecha Nacimiento&quot;).ToString.Trim,&#xD;&#xA;    &quot;dd/MM/yyyy&quot;,&#xD;&#xA;    System.Globalization.CultureInfo.InvariantCulture,&#xD;&#xA;    Globalization.DateTimeStyles.None,&#xD;&#xA;    Nothing&#xD;&#xA;)]" DisplayName="Comprobacion FECHA NACIMIENTO" sap:VirtualizedContainerService.HintSize="451.2,336.8" sap2010:WorkflowViewState.IdRef="If_3">
+    <If Condition="[Not DateTime.TryParseExact(&#xA;    io_queueParameters(&quot;Fecha Nacimiento&quot;).ToString.Trim,&#xA;    &quot;dd/MM/yyyy&quot;,&#xA;    System.Globalization.CultureInfo.InvariantCulture,&#xA;    Globalization.DateTimeStyles.None,&#xA;    Nothing&#xA;)]" DisplayName="Comprobacion FECHA NACIMIENTO" sap:VirtualizedContainerService.HintSize="452,338" sap2010:WorkflowViewState.IdRef="If_3">
       <If.Then>
-        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="449.6,173.6" sap2010:WorkflowViewState.IdRef="Sequence_6">
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,174" sap2010:WorkflowViewState.IdRef="Sequence_6">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -162,7 +162,7 @@
         </Sequence>
       </If.Else>
     </If>
-    <If Condition="[Not System.Text.RegularExpressions.Regex.IsMatch(&#xD;&#xA;    io_queueParameters(&quot;Nº Seguridad Social&quot;).ToString.Trim,&#xD;&#xA;    &quot;^\d{12}$&quot;&#xD;&#xA;)]" DisplayName="Comprobacion NUMERO SEGURIDAD SOCIAL" sap:VirtualizedContainerService.HintSize="451.2,336.8" sap2010:WorkflowViewState.IdRef="If_4">
+    <If Condition="[Not System.Text.RegularExpressions.Regex.IsMatch(&#xA;    io_queueParameters(&quot;Nº Seguridad Social&quot;).ToString.Trim,&#xA;    &quot;^\d{12}$&quot;&#xA;)]" DisplayName="Comprobacion NUMERO SEGURIDAD SOCIAL" sap:VirtualizedContainerService.HintSize="452,338" sap2010:WorkflowViewState.IdRef="If_4">
       <If.Then>
         <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="449.6,173.6" sap2010:WorkflowViewState.IdRef="Sequence_8">
           <sap:WorkflowViewStateService.ViewState>
@@ -184,7 +184,7 @@
         </Sequence>
       </If.Else>
     </If>
-    <If Condition="[Not New String() {&quot;2&quot;, &quot;3&quot;}.Contains(io_queueParameters(&quot;Grupo&quot;).ToString.Trim)]" DisplayName="Comprobacion GRUPO" sap:VirtualizedContainerService.HintSize="451.2,336.8" sap2010:WorkflowViewState.IdRef="If_5">
+    <If Condition="[Not New String() {&quot;2&quot;, &quot;3&quot;}.Contains(io_queueParameters(&quot;Grupo&quot;).ToString.Trim)]" DisplayName="Comprobacion GRUPO" sap:VirtualizedContainerService.HintSize="452,338" sap2010:WorkflowViewState.IdRef="If_5">
       <If.Then>
         <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="449.6,173.6" sap2010:WorkflowViewState.IdRef="Sequence_10">
           <sap:WorkflowViewStateService.ViewState>
@@ -206,7 +206,7 @@
         </Sequence>
       </If.Else>
     </If>
-    <If Condition="[Not System.Text.RegularExpressions.Regex.IsMatch(&#xD;&#xA;    io_queueParameters(&quot;Municipio del Domicilio&quot;).ToString.Trim,&#xD;&#xA;    &quot;^[A-Za-zÁÉÍÓÚáéíóúÑñ]+(?:\s+[A-Za-zÁÉÍÓÚáéíóúÑñ]+)*$&quot;&#xD;&#xA;)]" DisplayName="Comprobacion MUNICIPIO DEL DOMICILIO" sap:VirtualizedContainerService.HintSize="451.2,336.8" sap2010:WorkflowViewState.IdRef="If_6">
+    <If Condition="[Not System.Text.RegularExpressions.Regex.IsMatch(&#xD;&#xA;    io_queueParameters(&quot;Municipio del Domicilio&quot;).ToString.Trim,&#xD;&#xA;    &quot;^[A-Za-zÁÉÍÓÚÜáéíóúüÑñ]+(?:[ '-][A-Za-zÁÉÍÓÚÜáéíóúüÑñ]+)*$&quot;&#xD;&#xA;)]" DisplayName="Comprobacion MUNICIPIO DEL DOMICILIO" sap:VirtualizedContainerService.HintSize="452,338" sap2010:WorkflowViewState.IdRef="If_6">
       <If.Then>
         <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="449.6,173.6" sap2010:WorkflowViewState.IdRef="Sequence_12">
           <sap:WorkflowViewStateService.ViewState>
@@ -228,7 +228,7 @@
         </Sequence>
       </If.Else>
     </If>
-    <If Condition="[Not System.Text.RegularExpressions.Regex.IsMatch(&#xD;&#xA;    io_queueParameters(&quot;CP&quot;).ToString.Trim,&#xD;&#xA;    &quot;^(0[1-9]|[1-4][0-9]|5[0-2])\d{3}$&quot;&#xD;&#xA;)]" DisplayName="Comprobacion CODIGO POSTAL" sap:VirtualizedContainerService.HintSize="451.2,336.8" sap2010:WorkflowViewState.IdRef="If_7">
+    <If Condition="[Not System.Text.RegularExpressions.Regex.IsMatch(&#xA;    io_queueParameters(&quot;CP&quot;).ToString.Trim,&#xA;    &quot;^(0[1-9]|[1-4][0-9]|5[0-2])\d{3}$&quot;&#xA;)]" DisplayName="Comprobacion CODIGO POSTAL" sap:VirtualizedContainerService.HintSize="452,338" sap2010:WorkflowViewState.IdRef="If_7">
       <If.Then>
         <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="449.6,173.6" sap2010:WorkflowViewState.IdRef="Sequence_14">
           <sap:WorkflowViewStateService.ViewState>
@@ -250,7 +250,7 @@
         </Sequence>
       </If.Else>
     </If>
-    <If Condition="[Not System.Text.RegularExpressions.Regex.IsMatch(&#xD;&#xA;    io_queueParameters(&quot;Código Nivel Formativo&quot;).ToString.Trim,&#xD;&#xA;    &quot;^\d{2}$&quot;&#xD;&#xA;)]" DisplayName="Comprobacion CODIGO NIVEL FORMATIVO" sap:VirtualizedContainerService.HintSize="451.2,336.8" sap2010:WorkflowViewState.IdRef="If_8">
+    <If Condition="[Not System.Text.RegularExpressions.Regex.IsMatch(&#xA;    io_queueParameters(&quot;Código Nivel Formativo&quot;).ToString.Trim,&#xA;    &quot;^\d{2}$&quot;&#xA;)]" DisplayName="Comprobacion CODIGO NIVEL FORMATIVO" sap:VirtualizedContainerService.HintSize="452,338" sap2010:WorkflowViewState.IdRef="If_8">
       <If.Then>
         <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="449.6,173.6" sap2010:WorkflowViewState.IdRef="Sequence_16">
           <sap:WorkflowViewStateService.ViewState>

@@ -80,6 +80,9 @@
       <x:String>GlobalVariablesNamespace</x:String>
       <x:String>GlobalConstantsNamespace</x:String>
       <x:String>System.Data.Common</x:String>
+      <x:String>UiPath.Activities.System.Compression.Zip</x:String>
+      <x:String>UiPath.Activities.System.Encode</x:String>
+      <x:String>UiPath.Activities.System.Compression.Workflow</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -178,7 +181,7 @@
       <x:Boolean x:Key="ShouldExpandAll">False</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence sap2010:Annotation.AnnotationText="***IMPORTANTE***&#xA;Modifique los argumentos de entrada.&#xA;&#xA;Lea el archivo de configuración de la Carpeta indicada en el argumento in_ConfigFilePath.&#xA;Cierre todas las aplicaciones definidas en el archivo de configuración.&#xA;Verifique si el proceso se ejecuta dentro de los intervalos de tiempo permitidos.&#xA;Verifique si el proceso puede ejecutarse según el valor del recurso.&#xA;Ejecute el flujo de trabajo MainStep.xaml." DisplayName="Sequence - Main - Init Framework Step" sap:VirtualizedContainerService.HintSize="1348,11243.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="***IMPORTANTE***&#xA;Modifique los argumentos de entrada.&#xA;&#xA;Lea el archivo de configuración de la Carpeta indicada en el argumento in_ConfigFilePath.&#xA;Cierre todas las aplicaciones definidas en el archivo de configuración.&#xA;Verifique si el proceso se ejecuta dentro de los intervalos de tiempo permitidos.&#xA;Verifique si el proceso puede ejecutarse según el valor del recurso.&#xA;Ejecute el flujo de trabajo MainStep.xaml." DisplayName="Sequence - Main - Init Framework Step" sap:VirtualizedContainerService.HintSize="1348,11242" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="scg:Dictionary(x:String, x:String)" Default="[New Dictionary(Of String, string)]" Name="dic_HojaConfig" />
       <Variable x:TypeArguments="njl:JObject" Default="[new JObject]" Name="jo_config" />
@@ -195,7 +198,7 @@
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap2010:Annotation.AnnotationText="Leerá el archivo de configuración ubicado en la carpeta que contiene el valor del argumento in_ConfigFilePath.&#xA;Cerrará todas las aplicaciones definidas en el archivo de configuración." DisplayName="Sequence - Inicialization" sap:VirtualizedContainerService.HintSize="1348,4152.8" sap2010:WorkflowViewState.IdRef="Sequence_61">
+    <Sequence sap2010:Annotation.AnnotationText="Leerá el archivo de configuración ubicado en la carpeta que contiene el valor del argumento in_ConfigFilePath.&#xA;Cerrará todas las aplicaciones definidas en el archivo de configuración." DisplayName="Sequence - Inicialization" sap:VirtualizedContainerService.HintSize="1348,4153" sap2010:WorkflowViewState.IdRef="Sequence_61">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -203,7 +206,7 @@
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:LogMessage DisplayName="Log Message - Inicio Main" sap:VirtualizedContainerService.HintSize="574.4,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Iniciamos Main&quot;]">
+      <ui:LogMessage DisplayName="Log Message - Inicio Main" sap:VirtualizedContainerService.HintSize="574,175" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Iniciamos Main&quot;]">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -211,8 +214,8 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:LogMessage>
-      <ui:LogMessage DisplayName="Log Message screen resolution" sap:VirtualizedContainerService.HintSize="574.4,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_24" Level="Info" Message="[&quot;La resolución de pantalla principal es: &quot;+Screen.PrimaryScreen.Bounds.Width.ToString+&quot; x &quot;+ Screen.PrimaryScreen.Bounds.Height.ToString]" />
-      <Sequence DisplayName="Init All Settings - Read Config File" sap:VirtualizedContainerService.HintSize="574.4,1868.8" sap2010:WorkflowViewState.IdRef="Sequence_78">
+      <ui:LogMessage DisplayName="Log Message screen resolution" sap:VirtualizedContainerService.HintSize="574,175" sap2010:WorkflowViewState.IdRef="LogMessage_24" Level="Info" Message="[&quot;La resolución de pantalla principal es: &quot;+Screen.PrimaryScreen.Bounds.Width.ToString+&quot; x &quot;+ Screen.PrimaryScreen.Bounds.Height.ToString]" />
+      <Sequence DisplayName="Init All Settings - Read Config File" sap:VirtualizedContainerService.HintSize="574,1868" sap2010:WorkflowViewState.IdRef="Sequence_78">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
